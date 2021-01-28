@@ -1,5 +1,0 @@
-The following trace files are not included due to large sizes:
-	-    train/densenet121_cpu_train.trace
-	-    train/maml_cpu_train.trace
-	-    train/resnet50_cpu_train.trace
-	-    train/resnext50_32x4d_cpu_train.trace
