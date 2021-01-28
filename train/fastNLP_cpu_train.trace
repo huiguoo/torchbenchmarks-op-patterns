@@ -1,0 +1,178 @@
+[{"name": "aten::zeros", "ph": "X", "ts": 26.352, "dur": 15.060999999999996, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 31.802, "dur": 3.990000000000002, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 39.814, "dur": 1.1599999999999966, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "Optimizer.zero_grad#SGD.zero_grad", "ph": "X", "ts": 58.204, "dur": 17.756999999999998, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 60.836, "dur": 2.0700000000000003, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::embedding_bag", "ph": "X", "ts": 111.471, "dur": 361.68, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_embedding_bag", "ph": "X", "ts": 115.427, "dur": 356.88, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zeros", "ph": "X", "ts": 139.558, "dur": 6.994, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 143.051, "dur": 1.3310000000000173, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 145.682, "dur": 0.5580000000000211, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::slice", "ph": "X", "ts": 148.856, "dur": 7.287000000000006, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 153.228, "dur": 2.0999999999999943, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::slice", "ph": "X", "ts": 157.237, "dur": 3.5109999999999957, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 158.484, "dur": 1.8419999999999845, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::sub", "ph": "X", "ts": 168.6, "dur": 12.242999999999995, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 175.108, "dur": 0.9679999999999893, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::slice", "ph": "X", "ts": 181.95, "dur": 2.987000000000023, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 183.884, "dur": 0.6120000000000232, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 186.74, "dur": 6.971000000000004, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::select", "ph": "X", "ts": 195.66, "dur": 5.661000000000001, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 200.06, "dur": 0.5660000000000025, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 203.572, "dur": 7.572000000000003, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 207.721, "dur": 2.7520000000000095, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 213.073, "dur": 2.275999999999982, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::sub_", "ph": "X", "ts": 218.629, "dur": 2.4150000000000205, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::select", "ph": "X", "ts": 221.933, "dur": 3.084000000000003, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 224.194, "dur": 0.4720000000000084, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 225.673, "dur": 1.7210000000000036, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 230.301, "dur": 2.872000000000014, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 234.461, "dur": 0.45999999999997954, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zeros", "ph": "X", "ts": 236.389, "dur": 7.769999999999982, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 238.405, "dur": 1.5809999999999889, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 241.865, "dur": 1.9799999999999898, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::ones_like", "ph": "X", "ts": 246.13, "dur": 9.75, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 247.781, "dur": 4.1159999999999854, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 250.506, "dur": 0.931999999999988, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 252.942, "dur": 2.462999999999994, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::index_add_", "ph": "X", "ts": 258.093, "dur": 2.3839999999999577, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::select", "ph": "X", "ts": 261.374, "dur": 3.089999999999975, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 263.676, "dur": 0.37299999999999045, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::sub_", "ph": "X", "ts": 265.929, "dur": 3.494000000000028, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::cumsum", "ph": "X", "ts": 271.314, "dur": 21.95599999999996, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::to", "ph": "X", "ts": 275.121, "dur": 0.8400000000000318, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_cumsum", "ph": "X", "ts": 278.677, "dur": 13.733000000000004, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 280.116, "dur": 5.858000000000004, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 283.915, "dur": 1.3829999999999814, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 295.731, "dur": 1.733000000000004, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 298.714, "dur": 1.8589999999999804, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::ones_like", "ph": "X", "ts": 376.192, "dur": 9.240999999999985, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 377.688, "dur": 3.7630000000000337, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 379.972, "dur": 0.9620000000000459, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 383.606, "dur": 1.4460000000000264, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::max", "ph": "X", "ts": 401.341, "dur": 16.50799999999998, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::maximum", "ph": "X", "ts": 411.992, "dur": 5.4950000000000045, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 414.151, "dur": 0.9420000000000073, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::to", "ph": "X", "ts": 419.609, "dur": 11.854000000000042, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 425.042, "dur": 1.3480000000000132, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 428.087, "dur": 3.097000000000037, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::unsqueeze", "ph": "X", "ts": 435.346, "dur": 4.158999999999992, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 437.111, "dur": 1.829999999999984, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::expand_as", "ph": "X", "ts": 443.122, "dur": 7.040999999999997, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::expand", "ph": "X", "ts": 446.042, "dur": 3.7110000000000127, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 447.919, "dur": 1.2900000000000205, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::div_", "ph": "X", "ts": 452.986, "dur": 6.0049999999999955, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::dropout", "ph": "X", "ts": 510.318, "dur": 103.55000000000007, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 512.509, "dur": 7.567000000000007, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 516.881, "dur": 2.6230000000000473, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::bernoulli_", "ph": "X", "ts": 527.164, "dur": 40.07400000000007, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 535.041, "dur": 2.421999999999912, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::div_", "ph": "X", "ts": 569.261, "dur": 24.149, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::to", "ph": "X", "ts": 581.32, "dur": 8.533999999999992, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 583.321, "dur": 1.384999999999991, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 585.781, "dur": 3.6900000000000546, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::mul", "ph": "X", "ts": 598.383, "dur": 14.687999999999988, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 605.796, "dur": 2.3519999999999754, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::t", "ph": "X", "ts": 635.588, "dur": 15.875, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::transpose", "ph": "X", "ts": 641.244, "dur": 7.0090000000000146, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 646.46, "dur": 1.1689999999999827, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::addmm", "ph": "X", "ts": 656.207, "dur": 42.134000000000015, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 669.252, "dur": 0.775000000000091, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::expand", "ph": "X", "ts": 671.61, "dur": 3.1090000000000373, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 673.608, "dur": 0.6160000000000991, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 677.768, "dur": 4.122999999999934, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::log_softmax", "ph": "X", "ts": 729.993, "dur": 26.879999999999995, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_log_softmax", "ph": "X", "ts": 736.093, "dur": 20.148000000000025, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 743.134, "dur": 0.9779999999999518, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::nll_loss", "ph": "X", "ts": 774.915, "dur": 33.548, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::nll_loss_forward", "ph": "X", "ts": 781.559, "dur": 26.357000000000085, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 791.47, "dur": 0.6299999999999955, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 795.847, "dur": 0.43000000000006366, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 801.727, "dur": 0.9479999999999791, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 803.705, "dur": 0.5459999999999354, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::ones_like", "ph": "X", "ts": 828.515, "dur": 7.606999999999971, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 829.874, "dur": 3.7210000000000036, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 831.695, "dur": 1.3199999999999363, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 834.781, "dur": 1.0360000000000582, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "NllLossBackward", "ph": "X", "ts": 865.883, "dur": 39.44999999999993, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::nll_loss_backward", "ph": "X", "ts": 877.728, "dur": 26.124000000000024, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zeros_like", "ph": "X", "ts": 883.423, "dur": 10.653999999999996, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_like", "ph": "X", "ts": 885.945, "dur": 5.127999999999929, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 887.617, "dur": 2.580000000000041, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 893.05, "dur": 0.6980000000000928, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_as_", "ph": "X", "ts": 896.393, "dur": 4.11099999999999, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 899.529, "dur": 0.5090000000000146, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 901.221, "dur": 0.3160000000000309, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "LogSoftmaxBackward", "ph": "X", "ts": 909.424, "dur": 21.187000000000012, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_log_softmax_backward_data", "ph": "X", "ts": 916.075, "dur": 13.983999999999924, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 920.788, "dur": 1.0059999999999718, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "AddmmBackward", "ph": "X", "ts": 933.602, "dur": 65.36300000000006, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::t", "ph": "X", "ts": 937.39, "dur": 8.01400000000001, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::transpose", "ph": "X", "ts": 940.884, "dur": 3.0259999999999536, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 942.652, "dur": 0.7740000000000009, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::conj", "ph": "X", "ts": 946.867, "dur": 1.3179999999999836, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::mm", "ph": "X", "ts": 949.841, "dur": 18.404999999999973, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 954.664, "dur": 4.201999999999998, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::t", "ph": "X", "ts": 969.922, "dur": 7.083999999999946, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::transpose", "ph": "X", "ts": 972.658, "dur": 3.366999999999962, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 975.062, "dur": 0.6000000000000227, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::conj", "ph": "X", "ts": 977.853, "dur": 0.7170000000000982, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::mm", "ph": "X", "ts": 979.271, "dur": 7.752000000000066, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 981.045, "dur": 1.3910000000000764, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::t", "ph": "X", "ts": 988.53, "dur": 9.489000000000033, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::transpose", "ph": "X", "ts": 992.306, "dur": 4.708999999999946, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 996.068, "dur": 0.49900000000002365, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::sum", "ph": "X", "ts": 1001.095, "dur": 16.0, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 1006.266, "dur": 0.7459999999999809, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 1012.77, "dur": 2.3170000000000073, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::view", "ph": "X", "ts": 1018.964, "dur": 3.8179999999999836, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "torch::autograd::AccumulateGrad", "ph": "X", "ts": 1031.208, "dur": 15.281999999999925, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::new_empty_strided", "ph": "X", "ts": 1034.687, "dur": 4.691000000000031, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 1037.416, "dur": 1.33400000000006, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 1040.83, "dur": 5.226000000000113, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "TBackward", "ph": "X", "ts": 1048.684, "dur": 8.876999999999953, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::t", "ph": "X", "ts": 1050.844, "dur": 6.02800000000002, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::transpose", "ph": "X", "ts": 1053.264, "dur": 2.1790000000000873, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 1054.468, "dur": 0.5480000000000018, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "torch::autograd::AccumulateGrad", "ph": "X", "ts": 1060.571, "dur": 10.69900000000007, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::new_empty_strided", "ph": "X", "ts": 1062.414, "dur": 3.2349999999999, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 1063.785, "dur": 1.4769999999998618, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 1066.591, "dur": 4.341000000000122, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "MulBackward0", "ph": "X", "ts": 1073.209, "dur": 15.8599999999999, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::conj", "ph": "X", "ts": 1075.805, "dur": 0.640999999999849, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::mul", "ph": "X", "ts": 1077.874, "dur": 10.301999999999907, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 1082.466, "dur": 1.9480000000000928, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "EmbeddingBagBackward", "ph": "X", "ts": 1091.757, "dur": 5473.719999999999, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_embedding_bag_backward", "ph": "X", "ts": 1102.132, "dur": 5457.028, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::_embedding_bag_dense_backward", "ph": "X", "ts": 1115.922, "dur": 5441.224, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zeros", "ph": "X", "ts": 1121.322, "dur": 4781.927, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 1127.778, "dur": 17.240999999999985, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 1147.201, "dur": 4753.821, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::fill_", "ph": "X", "ts": 1148.319, "dur": 4749.618, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::sort", "ph": "X", "ts": 5909.445, "dur": 168.45800000000054, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 5914.335, "dur": 1.6409999999996217, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 5917.421, "dur": 3.3759999999992942, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 5929.374, "dur": 26.136000000000422, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 5957.189, "dur": 10.484999999999673, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 5972.438, "dur": 4.168999999999869, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::arange", "ph": "X", "ts": 5980.274, "dur": 21.363999999999578, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 5983.964, "dur": 1.1970000000001164, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::arange", "ph": "X", "ts": 5987.318, "dur": 13.853000000000065, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 5989.869, "dur": 0.9900000000006912, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::as_strided", "ph": "X", "ts": 6005.301, "dur": 1.3260000000000218, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 6007.64, "dur": 4.182999999999993, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::index_select", "ph": "X", "ts": 6080.198, "dur": 10.714999999999236, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 6082.593, "dur": 0.5610000000006039, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::resize_", "ph": "X", "ts": 6086.074, "dur": 0.9420000000000073, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "torch::autograd::AccumulateGrad", "ph": "X", "ts": 6580.99, "dur": 8564.752, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::new_empty_strided", "ph": "X", "ts": 6586.187, "dur": 28.134000000000015, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty_strided", "ph": "X", "ts": 6593.3, "dur": 20.005999999999403, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::copy_", "ph": "X", "ts": 6616.159, "dur": 8528.393, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zeros", "ph": "X", "ts": 15192.987, "dur": 11.022000000000844, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 15198.538, "dur": 2.6829999999990832, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::zero_", "ph": "X", "ts": 15202.888, "dur": 0.7189999999991414, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "Optimizer.step#SGD.step", "ph": "X", "ts": 15219.496, "dur": 3653.9170000000013, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::empty", "ph": "X", "ts": 15222.17, "dur": 0.8960000000006403, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::add_", "ph": "X", "ts": 15263.749, "dur": 3555.1850000000013, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::add_", "ph": "X", "ts": 18832.034, "dur": 8.18500000000131, "tid": 1, "pid": "CPU functions", "args": {}},
+ {"name": "aten::add_", "ph": "X", "ts": 18843.822, "dur": 3.9949999999989814, "tid": 1, "pid": "CPU functions", "args": {}}]

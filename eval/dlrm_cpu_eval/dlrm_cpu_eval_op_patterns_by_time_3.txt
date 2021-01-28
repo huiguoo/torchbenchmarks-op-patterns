@@ -1,0 +1,47 @@
+kList(3),            Time(us),                Time%,   Calls (Top 44, sorted by time)
+-------------------------------------------------------------
+('aten::embedding_bag', 'aten::_embedding_bag', 'aten::empty'), 1338.803, 20.61566922858026%, 3
+('aten::as_strided', 'aten::embedding_bag', 'aten::_embedding_bag'), 1325.377, 20.408927852094756%, 3
+('aten::transpose', 'aten::as_strided', 'aten::addmm'), 1309.1530000000007, 20.159101240140295%, 5
+('aten::addmm', 'aten::empty', 'aten::expand'), 1290.0819999999999, 19.86543486214572%, 5
+('aten::as_strided', 'aten::addmm', 'aten::empty'), 1161.9789999999994, 17.892830173338755%, 5
+('aten::t', 'aten::transpose', 'aten::as_strided'), 993.9250000000011, 15.305036691743787%, 5
+('aten::copy_', 'aten::relu', 'aten::threshold'), 972.5670000000005, 14.976153754236154%, 5
+('aten::select', 'aten::as_strided', 'aten::embedding_bag'), 937.182, 14.431274891809554%, 3
+('aten::as_strided', 'aten::copy_', 'aten::relu'), 831.2799999999995, 12.800534146050008%, 5
+('aten::relu', 'aten::threshold', 'aten::empty'), 782.1719999999995, 12.04434052796197%, 4
+('aten::_embedding_bag', 'aten::empty', 'aten::empty'), 720.3129999999999, 11.091799576970121%, 3
+('aten::threshold', 'aten::empty', 'aten::t'), 540.2950000000003, 8.319777447358407%, 3
+('aten::expand', 'aten::as_strided', 'aten::copy_'), 531.4379999999999, 8.183392196983599%, 5
+('aten::empty', 'aten::t', 'aten::transpose'), 528.3990000000008, 8.136595902991402%, 3
+('aten::empty', 'aten::expand', 'aten::as_strided'), 508.9999999999994, 7.837878789745272%, 5
+('aten::empty', 'aten::cat', 'aten::_cat'), 381.6600000000003, 5.877023219831408%, 2
+('aten::cat', 'aten::_cat', 'aten::empty'), 379.24299999999994, 5.839804844517425%, 2
+('aten::empty', 'aten::select', 'aten::as_strided'), 328.7719999999997, 5.06262295768592%, 3
+('aten::index', 'aten::as_strided', 'aten::reshape'), 237.87400000000025, 3.6629225525184106%, 1
+('aten::empty', 'aten::empty', 'aten::select'), 228.9559999999999, 3.525597988575481%, 2
+('aten::to', 'aten::to', 'aten::index'), 217.04300000000012, 3.3421546682960432%, 1
+('aten::to', 'aten::index', 'aten::as_strided'), 216.538, 3.334378383838632%, 1
+('aten::empty', 'aten::empty', 'aten::empty'), 210.12200000000007, 3.235581074771824%, 3
+('aten::_cat', 'aten::empty', 'aten::resize_'), 199.93899999999985, 3.0787773032276635%, 2
+('aten::transpose', 'aten::as_strided', 'aten::bmm'), 171.08200000000033, 2.6344203911732906%, 1
+('aten::resize_', 'aten::t', 'aten::transpose'), 170.76500000000033, 2.629539040335669%, 1
+('aten::empty', 'aten::empty', 'aten::cat'), 161.08300000000008, 2.480449958916581%, 1
+('aten::empty', 'aten::to', 'aten::detach_'), 148.21699999999964, 2.282331788958101%, 2
+('aten::threshold', 'aten::empty', 'aten::select'), 145.38699999999972, 2.238753798830442%, 1
+('aten::empty', 'aten::resize_', 'aten::t'), 140.79799999999977, 2.1680897010580633%, 1
+('aten::view', 'aten::empty', 'aten::cat'), 136.42699999999968, 2.1007824943979903%, 1
+('aten::as_strided', 'aten::bmm', 'aten::empty'), 128.25800000000027, 1.974991469184975%, 1
+('aten::bmm', 'aten::empty', 'aten::resize_'), 127.43299999999999, 1.9622876381406882%, 1
+('aten::view', 'aten::transpose', 'aten::as_strided'), 122.86500000000024, 1.8919469106130762%, 1
+('aten::resize_', 'aten::view', 'aten::transpose'), 122.61699999999973, 1.888128062008242%, 1
+('aten::slice', 'aten::as_strided', 'aten::to'), 94.80100000000039, 1.4598010749442936%, 1
+('aten::reshape', 'aten::view', 'aten::reshape'), 92.35000000000036, 1.422059147805461%, 1
+('aten::empty', 'aten::resize_', 'aten::view'), 80.07499999999936, 1.233041540449604%, 1
+('aten::as_strided', 'aten::reshape', 'aten::view'), 73.3420000000001, 1.1293628805451852%, 1
+('aten::reshape', 'aten::view', 'aten::empty'), 71.89899999999989, 1.1071427251550001%, 1
+('aten::view', 'aten::reshape', 'aten::view'), 71.84000000000015, 1.1062342087530495%, 1
+('aten::resize_', 'aten::empty', 'aten::to'), 60.29100000000017, 0.928395972716177%, 1
+('aten::empty', 'aten::resize_', 'aten::empty'), 60.113000000000284, 0.9256550249272305%, 1
+('aten::as_strided', 'aten::to', 'aten::to'), 53.777000000000044, 0.8280896025071363%, 1
+Total time: 6494.104000000001us

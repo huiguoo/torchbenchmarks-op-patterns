@@ -1,0 +1,36 @@
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                             Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                      aten::addmm        44.49%      18.158ms        45.14%      18.421ms       6.140ms             3  
+         aten::mkldnn_convolution        39.19%      15.993ms        40.16%      16.388ms       3.278ms             5  
+    aten::max_pool2d_with_indices         6.88%       2.809ms         7.62%       3.111ms       1.037ms             3  
+                      aten::empty         1.44%     588.819us         1.44%     588.819us      28.039us            21  
+                      aten::relu_         1.05%     430.361us         1.87%     763.554us     109.079us             7  
+                 aten::threshold_         0.82%     333.193us         0.82%     333.193us      47.599us             7  
+                 aten::bernoulli_         0.46%     189.420us         0.57%     233.330us     116.665us             2  
+                     aten::conv2d         0.43%     176.591us        41.36%      16.879ms       3.376ms             5  
+                    aten::resize_         0.43%     175.066us         0.43%     175.066us      25.009us             7  
+               aten::_convolution         0.40%     165.091us        40.56%      16.553ms       3.311ms             5  
+                aten::as_strided_         0.40%     163.832us         0.40%     163.832us      32.766us             5  
+                 aten::as_strided         0.39%     159.321us         0.39%     159.321us      19.915us             8  
+                aten::convolution         0.37%     149.193us        40.93%      16.703ms       3.341ms             5  
+                       aten::div_         0.36%     148.793us         0.71%     289.814us     144.907us             2  
+                          aten::t         0.34%     138.497us         0.66%     269.546us      89.849us             3  
+                      aten::copy_         0.33%     135.744us         0.33%     135.744us      27.149us             5  
+       aten::_adaptive_avg_pool2d         0.29%     119.012us         0.39%     157.358us     157.358us             1  
+                     aten::select         0.25%     102.326us         0.31%     125.124us     125.124us             1  
+                        aten::mul         0.25%     101.893us         0.35%     142.568us      71.284us             2  
+                 aten::max_pool2d         0.24%      99.840us         7.87%       3.211ms       1.070ms             3  
+                    aten::dropout         0.19%      78.823us         2.05%     837.364us     418.682us             2  
+                  aten::transpose         0.17%      69.653us         0.32%     131.049us      43.683us             3  
+                     aten::expand         0.15%      60.695us         0.29%     119.977us      39.992us             3  
+                         aten::to         0.12%      48.879us         0.35%     141.021us      70.510us             2  
+                 aten::empty_like         0.11%      43.686us         0.23%      92.829us      46.415us             2  
+                  aten::unsqueeze         0.11%      42.976us         0.14%      58.821us      58.821us             1  
+              aten::empty_strided         0.10%      41.825us         0.10%      41.825us      20.912us             2  
+                       aten::view         0.09%      36.496us         0.09%      36.496us      36.496us             1  
+        aten::adaptive_avg_pool2d         0.07%      29.560us         0.46%     186.918us     186.918us             1  
+                    aten::flatten         0.05%      21.305us         0.14%      57.801us      57.801us             1  
+---------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 40.810ms
+

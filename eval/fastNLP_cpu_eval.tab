@@ -1,0 +1,42 @@
+--------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                      Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+--------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+               aten::empty        13.00%     335.451us        13.00%     335.451us      20.966us            16  
+      aten::_embedding_bag        10.04%     259.187us        63.09%       1.628ms       1.628ms             1  
+          aten::as_strided         8.20%     211.504us         8.20%     211.504us      21.150us            10  
+          aten::empty_like         4.67%     120.542us         8.87%     228.916us      45.783us             5  
+               aten::copy_         4.57%     117.982us         4.57%     117.982us      23.596us             5  
+                aten::div_         3.96%     102.244us         6.50%     167.741us      83.870us             2  
+          aten::bernoulli_         3.11%      80.310us         3.93%     101.406us     101.406us             1  
+               aten::zero_         2.79%      72.007us         2.79%      72.007us      24.002us             3  
+                  aten::to         2.75%      71.062us         6.09%     157.058us      52.353us             3  
+             aten::resize_         2.74%      70.686us         2.74%      70.686us      23.562us             3  
+              aten::select         2.64%      68.206us         5.19%     133.966us      44.655us             3  
+               aten::slice         2.64%      68.035us         5.15%     132.976us      44.325us             3  
+               aten::fill_         2.52%      65.131us         2.52%      65.131us      21.710us             3  
+       aten::embedding_bag         2.50%      64.637us        65.59%       1.692ms       1.692ms             1  
+               aten::addmm         2.48%      64.099us         5.73%     147.901us     147.901us             1  
+       aten::empty_strided         2.42%      62.548us         2.42%      62.548us      20.849us             3  
+               aten::zeros         2.11%      54.365us         5.96%     153.669us      76.834us             2  
+           aten::ones_like         2.07%      53.389us         7.25%     187.012us      93.506us             2  
+        aten::_log_softmax         2.01%      51.802us         2.71%      69.974us      69.974us             1  
+                   aten::t         1.98%      51.164us         3.60%      92.935us      92.935us             1  
+                aten::sub_         1.87%      48.127us         1.87%      48.127us      24.064us             2  
+    aten::nll_loss_forward         1.78%      45.860us         4.54%     117.207us     117.207us             1  
+                 aten::mul         1.76%      45.389us         2.56%      65.958us      65.958us             1  
+              aten::expand         1.73%      44.747us         3.32%      85.582us      42.791us             2  
+              aten::cumsum         1.69%      43.716us         5.59%     144.113us     144.113us             1  
+             aten::dropout         1.69%      43.630us        15.49%     399.743us     399.743us             1  
+            aten::nll_loss         1.24%      32.082us         5.79%     149.289us     149.289us             1  
+                 aten::max         1.21%      31.215us         2.94%      75.810us      75.810us             1  
+                 aten::sub         1.19%      30.670us         2.01%      51.786us      51.786us             1  
+             aten::_cumsum         1.17%      30.234us         3.01%      77.612us      77.612us             1  
+         aten::log_softmax         1.08%      27.996us         3.80%      97.970us      97.970us             1  
+             aten::maximum         0.95%      24.405us         1.73%      44.595us      44.595us             1  
+          aten::index_add_         0.90%      23.251us         0.90%      23.251us      23.251us             1  
+           aten::expand_as         0.84%      21.720us         2.56%      66.010us      66.010us             1  
+           aten::transpose         0.83%      21.525us         1.62%      41.771us      41.771us             1  
+           aten::unsqueeze         0.83%      21.409us         1.59%      41.131us      41.131us             1  
+--------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 2.580ms
+

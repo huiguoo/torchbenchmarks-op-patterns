@@ -1,0 +1,3 @@
+Community: {'aten::select', 'aten::unsqueeze', 'aten::as_strided'}
+Community: {'aten::empty', 'aten::max_pool2d', 'aten::thnn_conv2d', 'aten::div_', 'aten::mkldnn_convolution', 'aten::copy_', 'aten::_convolution', 'aten::adaptive_avg_pool2d', 'aten::cat', 'aten::threshold_', 'aten::dropout', 'aten::detach', 'aten::addmm_', 'aten::convolution', 'aten::relu_', 'aten::to', 'aten::fill_', 'aten::mean', 'aten::empty_strided', 'aten::sum', 'aten::bernoulli_', 'aten::_cat', 'aten::empty_like', 'aten::_nnpack_available', 'aten::thnn_conv2d_forward', 'aten::max_pool2d_with_indices', 'aten::mul', 'aten::as_strided_', 'aten::conv2d', 'aten::resize_', 'aten::_convolution_nogroup'}
+Community: {'aten::reshape', 'aten::flatten', 'aten::view'}

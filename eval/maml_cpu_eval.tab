@@ -1,0 +1,72 @@
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                         Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                 aten::select        38.78%     430.997ms        75.31%     836.995ms      35.150us         23812  
+                             aten::as_strided        36.68%     407.740ms        36.68%     407.740ms      17.049us         23916  
+                      aten::native_batch_norm         7.10%      78.901ms        61.13%     679.477ms       8.089ms            84  
+                     aten::mkldnn_convolution         4.97%      55.230ms         5.35%      59.463ms     707.898us            84  
+                                  aten::empty         2.05%      22.839ms         2.05%      22.839ms      18.659us          1224  
+             aten::native_batch_norm_backward         1.61%      17.848ms        23.80%     264.536ms       6.613ms            40  
+    aten::mkldnn_convolution_backward_weights         0.74%       8.232ms         1.01%      11.208ms     280.210us            40  
+      aten::mkldnn_convolution_backward_input         0.64%       7.107ms         0.76%       8.429ms     280.977us            30  
+                                    aten::mul         0.63%       6.982ms         1.70%      18.943ms     105.237us           180  
+                                    aten::sub         0.62%       6.854ms         0.87%       9.706ms      53.920us           180  
+                                  aten::relu_         0.58%       6.433ms         1.06%      11.823ms     140.745us            84  
+                             aten::threshold_         0.48%       5.389ms         0.48%       5.389ms      64.159us            84  
+                                  aten::copy_         0.44%       4.860ms         0.44%       4.860ms      20.249us           240  
+                          aten::empty_strided         0.37%       4.089ms         0.37%       4.089ms      17.855us           229  
+                             aten::empty_like         0.37%       4.079ms         0.72%       8.032ms      35.857us           224  
+                            aten::as_strided_         0.34%       3.735ms         0.34%       3.735ms      19.252us           194  
+                                     aten::to         0.31%       3.443ms         0.88%       9.762ms      50.319us           194  
+                                      aten::t         0.20%       2.260ms         0.39%       4.352ms      71.338us            61  
+                     aten::threshold_backward         0.20%       2.202ms         0.26%       2.931ms      73.282us            40  
+                             aten::batch_norm         0.19%       2.058ms        61.65%     685.248ms       8.158ms            84  
+                 aten::_batch_norm_impl_index         0.18%       2.053ms        61.47%     683.191ms       8.133ms            84  
+                           aten::_convolution         0.18%       2.021ms         5.53%      61.485ms     731.962us            84  
+                                 aten::conv2d         0.17%       1.890ms         5.87%      65.215ms     776.368us            84  
+            aten::mkldnn_convolution_backward         0.17%       1.869ms         1.93%      21.506ms     537.662us            40  
+                            aten::convolution         0.17%       1.840ms         5.70%      63.325ms     753.867us            84  
+                                  aten::clone         0.16%       1.822ms         0.34%       3.761ms     144.647us            26  
+                                   aten::view         0.14%       1.525ms         0.14%       1.525ms      37.202us            41  
+                                  aten::addmm         0.12%       1.309ms         0.27%       3.040ms     144.774us            21  
+                                aten::resize_         0.11%       1.209ms         0.11%       1.209ms      17.267us            70  
+                              aten::transpose         0.10%       1.082ms         0.19%       2.092ms      34.290us            61  
+                           aten::_log_softmax         0.09%       1.027ms         0.13%       1.392ms      73.289us            19  
+                       aten::nll_loss_forward         0.09%     978.561us         0.21%       2.358ms     124.117us            19  
+                                 aten::detach         0.08%     881.037us         0.16%       1.748ms      67.244us            26  
+                                       detach         0.08%     867.299us         0.08%     867.299us      33.358us            26  
+                                    aten::sum         0.08%     849.611us         0.21%       2.304ms     109.721us            21  
+                                     aten::mm         0.07%     760.706us         0.10%       1.085ms      54.247us            20  
+                                 aten::argmax         0.06%     649.779us         0.11%       1.175ms     106.820us            11  
+                                     aten::eq         0.06%     623.822us         0.12%       1.368ms      62.202us            22  
+                                  aten::fill_         0.05%     540.879us         0.05%     540.879us      17.448us            31  
+                               aten::_softmax         0.05%     529.490us         0.07%     730.590us      66.417us            11  
+                                 aten::expand         0.04%     451.964us         0.08%     835.749us      39.798us            21  
+                            aten::log_softmax         0.04%     450.363us         0.17%       1.843ms      96.992us            19  
+                      aten::nll_loss_backward         0.04%     429.268us         0.14%       1.604ms     160.433us            10  
+                      NativeBatchNormBackward         0.04%     429.072us        23.84%     264.965ms       6.624ms            40  
+                               aten::nll_loss         0.04%     418.736us         0.25%       2.777ms     146.156us            19  
+             aten::_log_softmax_backward_data         0.04%     410.394us         0.05%     588.916us      58.892us            10  
+                    aten::_local_scalar_dense         0.04%     404.565us         0.04%     404.565us      36.779us            11  
+                                   aten::conj         0.03%     310.687us         0.03%     310.687us      15.534us            20  
+                                  aten::zero_         0.03%     303.478us         0.03%     303.478us      15.174us            20  
+                                aten::softmax         0.03%     283.494us         0.09%       1.014ms      92.189us            11  
+                    MkldnnConvolutionBackward         0.02%     269.842us         1.96%      21.776ms     544.408us            40  
+                              aten::ones_like         0.02%     253.797us         0.08%     853.317us      85.332us            10  
+                                   aten::item         0.02%     188.869us         0.05%     593.434us      53.949us            11  
+                             aten::resize_as_         0.02%     188.314us         0.03%     349.867us      34.987us            10  
+                             aten::zeros_like         0.02%     184.276us         0.06%     676.560us      67.656us            10  
+                                ReluBackward1         0.02%     179.820us         0.28%       3.111ms      77.778us            40  
+                                aten::reshape         0.02%     168.630us         0.04%     486.448us      48.645us            10  
+                      aten::is_floating_point         0.02%     168.150us         0.02%     168.150us      15.286us            11  
+                                AddmmBackward         0.01%     120.875us         0.32%       3.534ms     353.418us            10  
+                              NllLossBackward         0.01%      86.760us         0.15%       1.691ms     169.109us            10  
+                           LogSoftmaxBackward         0.00%      48.258us         0.06%     637.174us      63.717us            10  
+                                    aten::div         0.00%      38.197us         0.01%     146.672us     146.672us             1  
+                                 ViewBackward         0.00%      22.400us         0.05%     508.848us      50.885us            10  
+                                    TBackward         0.00%      20.387us         0.06%     666.115us      66.611us            10  
+                                aten::detach_         0.00%      14.790us         0.00%      28.991us      28.991us             1  
+                                      detach_         0.00%      14.201us         0.00%      14.201us      14.201us             1  
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 1.111s
+

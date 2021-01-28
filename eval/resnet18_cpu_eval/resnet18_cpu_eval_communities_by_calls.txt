@@ -1,0 +1,3 @@
+Community: {'aten::empty_strided', 'aten::flatten', 'aten::select', 'aten::view', 'aten::div_', 'aten::copy_', 'aten::unsqueeze', 'aten::transpose', 'aten::expand', 'aten::as_strided', 'aten::fill_', 'aten::t', 'aten::to'}
+Community: {'aten::empty', 'aten::max_pool2d', 'aten::mkldnn_convolution', 'aten::native_batch_norm', 'aten::_convolution', 'aten::add_', 'aten::adaptive_avg_pool2d', 'aten::threshold_', 'aten::convolution', 'aten::relu_', 'aten::mean', 'aten::batch_norm', 'aten::sum', 'aten::empty_like', 'aten::_batch_norm_impl_index', 'aten::max_pool2d_with_indices', 'aten::as_strided_', 'aten::add', 'aten::conv2d', 'aten::addmm'}
+Community: {'aten::resize_'}

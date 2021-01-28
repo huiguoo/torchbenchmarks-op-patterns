@@ -1,0 +1,31 @@
+----------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                        Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+----------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+    aten::mkldnn_convolution        50.48%      41.262ms        50.99%      41.674ms       6.946ms             6  
+                 aten::addmm        20.78%      16.986ms        21.41%      17.497ms       4.374ms             4  
+                 aten::copy_        17.03%      13.918ms        17.03%      13.918ms       1.740ms             8  
+             aten::threshold         5.70%       4.658ms         5.89%       4.813ms     687.610us             7  
+               aten::sigmoid         1.28%       1.046ms         1.30%       1.064ms       1.064ms             1  
+                  aten::rsub         0.77%     627.287us         0.86%     706.686us     706.686us             1  
+                 aten::empty         0.68%     558.084us         0.68%     558.084us      25.367us            22  
+                  aten::relu         0.44%     362.068us         6.33%       5.175ms     739.334us             7  
+                  aten::view         0.33%     271.211us         0.33%     271.211us      33.901us             8  
+                     aten::t         0.29%     237.688us         0.51%     419.184us     104.796us             4  
+            aten::as_strided         0.26%     213.598us         0.26%     213.598us      19.418us            11  
+           aten::as_strided_         0.23%     185.282us         0.23%     185.282us      30.880us             6  
+                aten::conv2d         0.22%     180.676us        51.58%      42.159ms       7.027ms             6  
+          aten::_convolution         0.20%     163.062us        51.18%      41.837ms       6.973ms             6  
+          aten::_unsafe_view         0.18%     150.417us         0.25%     206.202us      68.734us             3  
+           aten::convolution         0.17%     141.776us        51.36%      41.978ms       6.996ms             6  
+               aten::reshape         0.17%     137.158us        17.55%      14.347ms       2.391ms             6  
+                 aten::clone         0.16%     133.695us        16.98%      13.879ms       4.626ms             3  
+               aten::permute         0.16%     129.867us         0.23%     185.673us      61.891us             3  
+             aten::transpose         0.12%      99.872us         0.22%     181.496us      45.374us             4  
+         aten::pixel_shuffle         0.11%      92.073us        17.89%      14.625ms       4.875ms             3  
+                aten::expand         0.10%      85.624us         0.20%     161.792us      40.448us             4  
+            aten::empty_like         0.07%      57.367us         0.15%     120.390us      40.130us             3  
+                    aten::to         0.03%      22.954us         0.08%      61.459us      61.459us             1  
+         aten::empty_strided         0.02%      17.973us         0.02%      17.973us      17.973us             1  
+----------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 81.737ms
+

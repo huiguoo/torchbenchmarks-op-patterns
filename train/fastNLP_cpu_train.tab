@@ -1,0 +1,66 @@
+---------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                            aten::copy_        46.28%       8.572ms        46.28%       8.572ms     857.223us            10  
+                            aten::fill_        25.69%       4.759ms        25.69%       4.759ms     793.193us             6  
+                             aten::add_        19.26%       3.567ms        19.26%       3.567ms       1.189ms             3  
+    aten::_embedding_bag_dense_backward         2.59%     480.124us        29.37%       5.441ms       5.441ms             1  
+                   aten::_embedding_bag         0.99%     183.982us         1.93%     356.880us     356.880us             1  
+                             aten::sort         0.52%      95.778us         0.91%     168.458us     168.458us             1  
+                Optimizer.step#SGD.step         0.46%      85.656us        19.73%       3.654ms       3.654ms             1  
+                            aten::empty         0.36%      67.169us         0.36%      67.169us       2.167us            31  
+                            aten::zeros         0.20%      37.710us        26.04%       4.823ms     964.555us             5  
+                       aten::bernoulli_         0.20%      37.652us         0.22%      40.074us      40.074us             1  
+                          aten::resize_         0.19%      35.973us         0.19%      35.973us       4.497us             8  
+                            aten::addmm         0.18%      34.127us         0.23%      42.134us      42.134us             1  
+                    aten::empty_strided         0.16%      29.622us         0.16%      29.622us       4.232us             7  
+                                aten::t         0.14%      26.200us         0.25%      46.490us       9.298us             5  
+                       aten::empty_like         0.14%      25.173us         0.20%      37.725us       5.389us             7  
+                 aten::nll_loss_forward         0.13%      23.803us         0.14%      26.357us      26.357us             1  
+                             aten::div_         0.12%      21.620us         0.16%      30.154us      15.077us             2  
+                              aten::mul         0.11%      20.690us         0.13%      24.990us      12.495us             2  
+                               aten::mm         0.11%      20.564us         0.14%      26.157us      13.079us             2  
+                           aten::arange         0.10%      19.177us         0.19%      35.217us      17.608us             2  
+                     aten::_log_softmax         0.10%      19.170us         0.11%      20.148us      20.148us             1  
+                          aten::dropout         0.09%      17.072us         0.56%     103.550us     103.550us             1  
+        torch::autograd::AccumulateGrad         0.09%      16.713us        46.38%       8.591ms       2.864ms             3  
+                        aten::transpose         0.09%      16.700us         0.11%      20.290us       4.058us             5  
+                   EmbeddingBagBackward         0.09%      16.692us        29.55%       5.474ms       5.474ms             1  
+          aten::_embedding_bag_backward         0.09%      15.804us        29.46%       5.457ms       5.457ms             1  
+      Optimizer.zero_grad#SGD.zero_grad         0.08%      15.687us         0.10%      17.757us      17.757us             1  
+                       aten::as_strided         0.08%      14.617us         0.08%      14.617us       0.974us            15  
+                        NllLossBackward         0.07%      13.326us         0.21%      39.450us      39.450us             1  
+                aten::new_empty_strided         0.07%      13.243us         0.19%      36.060us      12.020us             3  
+       aten::_log_softmax_backward_data         0.07%      12.978us         0.08%      13.984us      13.984us             1  
+                              aten::sum         0.07%      12.937us         0.09%      16.000us      16.000us             1  
+                          AddmmBackward         0.07%      12.584us         0.35%      65.363us      65.363us             1  
+                               aten::to         0.06%      11.708us         0.11%      21.228us       7.076us             3  
+                            aten::zero_         0.06%      11.493us        25.70%       4.761ms     595.139us             8  
+                              aten::sub         0.06%      11.275us         0.07%      12.243us      12.243us             1  
+                aten::nll_loss_backward         0.06%      11.043us         0.14%      26.124us      26.124us             1  
+                              aten::max         0.06%      11.013us         0.09%      16.508us      16.508us             1  
+                           aten::select         0.06%      10.424us         0.06%      11.835us       3.945us             3  
+                        aten::ones_like         0.05%      10.053us         0.14%      26.598us       8.866us             3  
+                            aten::slice         0.05%       9.231us         0.07%      13.785us       4.595us             3  
+                     aten::index_select         0.05%       9.212us         0.06%      10.715us      10.715us             1  
+                          aten::_cumsum         0.04%       7.875us         0.07%      13.733us      13.733us             1  
+                           aten::cumsum         0.04%       7.383us         0.12%      21.956us      21.956us             1  
+                     LogSoftmaxBackward         0.04%       7.203us         0.11%      21.187us      21.187us             1  
+                         aten::nll_loss         0.04%       7.191us         0.18%      33.548us      33.548us             1  
+                      aten::log_softmax         0.04%       6.732us         0.15%      26.880us      26.880us             1  
+                             aten::sub_         0.03%       5.909us         0.03%       5.909us       2.955us             2  
+                           MulBackward0         0.03%       4.917us         0.09%      15.860us      15.860us             1  
+                           aten::expand         0.03%       4.914us         0.04%       6.820us       3.410us             2  
+                       aten::zeros_like         0.03%       4.828us         0.06%      10.654us      10.654us             1  
+                    aten::embedding_bag         0.03%       4.800us         1.95%     361.680us     361.680us             1  
+                          aten::maximum         0.02%       4.553us         0.03%       5.495us       5.495us             1  
+                             aten::view         0.02%       3.818us         0.02%       3.818us       3.818us             1  
+                       aten::resize_as_         0.02%       3.602us         0.02%       4.111us       4.111us             1  
+                        aten::expand_as         0.02%       3.330us         0.04%       7.041us       7.041us             1  
+                              TBackward         0.02%       2.849us         0.05%       8.877us       8.877us             1  
+                             aten::conj         0.01%       2.676us         0.01%       2.676us       0.892us             3  
+                       aten::index_add_         0.01%       2.384us         0.01%       2.384us       2.384us             1  
+                        aten::unsqueeze         0.01%       2.329us         0.02%       4.159us       4.159us             1  
+---------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 18.524ms
+

@@ -1,0 +1,75 @@
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                         Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+      aten::mkldnn_convolution_backward_input        15.88%      55.306ms        15.90%      55.374ms       9.229ms             6  
+                                     aten::mm        12.71%      44.270ms        12.72%      44.293ms       6.328ms             7  
+                                   aten::sqrt        12.30%      42.836ms        12.31%      42.882ms       2.144ms            20  
+                     aten::mkldnn_convolution        11.22%      39.070ms        11.23%      39.124ms       6.521ms             6  
+                                  aten::copy_         9.26%      32.252ms         9.26%      32.252ms     285.413us           113  
+    aten::mkldnn_convolution_backward_weights         9.23%      32.143ms         9.25%      32.200ms       5.367ms             6  
+                                  aten::fill_         5.29%      18.431ms         5.29%      18.431ms       1.418ms            13  
+                                  aten::addmm         4.80%      16.724ms         4.92%      17.148ms       4.287ms             4  
+                                    aten::div         4.28%      14.898ms         4.32%      15.039ms     751.935us            20  
+                                   aten::add_         2.99%      10.415ms         3.02%      10.516ms     262.905us            40  
+                                aten::addcdiv         2.74%       9.545ms         2.74%       9.545ms     477.243us            20  
+                                   aten::mul_         2.23%       7.758ms         2.29%       7.978ms     199.450us            40  
+                                aten::addcmul         2.00%       6.967ms         2.00%       6.967ms     348.359us            20  
+                     aten::threshold_backward         0.94%       3.285ms         0.95%       3.303ms     471.856us             7  
+                              aten::threshold         0.89%       3.116ms         0.90%       3.147ms     449.587us             7  
+                               aten::mse_loss         0.49%       1.722ms         0.60%       2.107ms       2.107ms             1  
+                                    aten::neg         0.49%       1.709ms         0.98%       3.419ms       1.710ms             2  
+                     Optimizer.step#Adam.step         0.30%       1.028ms        32.04%     111.583ms     111.583ms             1  
+                                aten::sigmoid         0.28%     962.375us         0.28%     965.446us     965.446us             1  
+                      aten::mse_loss_backward         0.23%     798.779us         0.87%       3.019ms       1.510ms             2  
+                       aten::sigmoid_backward         0.18%     612.434us         0.18%     615.299us     615.299us             1  
+                                    aten::mul         0.16%     563.474us         0.17%     578.040us     578.040us             1  
+                                    aten::sum         0.15%     531.240us         0.16%     561.969us     112.394us             5  
+                                   aten::rsub         0.11%     384.664us         0.12%     402.823us     402.823us             1  
+                                  aten::empty         0.10%     349.658us         0.10%     349.658us       3.150us           111  
+                                     aten::to         0.07%     238.213us         0.13%     469.420us       5.656us            83  
+                               aten::addcdiv_         0.06%     206.808us         2.80%       9.752ms     487.583us            20  
+                          aten::empty_strided         0.06%     193.965us         0.06%     193.965us       1.347us           144  
+            aten::mkldnn_convolution_backward         0.03%     121.720us        25.18%      87.696ms      14.616ms             6  
+                                   aten::view         0.03%     112.956us         0.03%     112.956us       5.648us            20  
+                             aten::empty_like         0.03%     112.258us         0.06%     222.606us       4.638us            48  
+                                      aten::t         0.03%     111.047us         0.06%     203.916us      10.732us            19  
+              torch::autograd::AccumulateGrad         0.03%     108.644us         4.20%      14.620ms     731.006us            20  
+                             aten::zeros_like         0.03%     106.640us         5.39%      18.787ms     458.218us            41  
+                                  aten::zero_         0.03%     102.912us         5.32%      18.512ms     430.516us            43  
+                                AddmmBackward         0.03%      94.494us        12.78%      44.516ms      11.129ms             4  
+                                   aten::relu         0.03%      88.172us         0.93%       3.235ms     462.183us             7  
+                    MkldnnConvolutionBackward         0.02%      85.225us        25.20%      87.782ms      14.630ms             6  
+                               aten::addcmul_         0.02%      76.250us         2.02%       7.043ms     352.171us            20  
+                                aten::reshape         0.02%      68.848us         5.05%      17.577ms       1.255ms            14  
+                              aten::transpose         0.02%      66.503us         0.03%      92.869us       4.888us            19  
+                                  aten::clone         0.02%      62.669us         4.99%      17.387ms       2.898ms             6  
+                           aten::_convolution         0.02%      60.693us        11.25%      39.185ms       6.531ms             6  
+                      aten::new_empty_strided         0.02%      59.977us         0.03%     106.015us       5.301us            20  
+                                aten::permute         0.01%      48.565us         0.02%      61.750us      10.292us             6  
+                                ReluBackward0         0.01%      47.078us         0.96%       3.350ms     478.582us             7  
+                            aten::as_strided_         0.01%      45.247us         0.01%      45.247us       1.885us            24  
+                             aten::as_strided         0.01%      44.040us         0.01%      44.040us       1.468us            30  
+                           aten::_unsafe_view         0.01%      41.231us         0.02%      55.414us       9.236us             6  
+                                 aten::conv2d         0.01%      37.962us        11.27%      39.260ms       6.543ms             6  
+                            aten::convolution         0.01%      36.952us        11.26%      39.222ms       6.537ms             6  
+                          aten::pixel_shuffle         0.01%      34.337us         4.21%      14.661ms       4.887ms             3  
+           Optimizer.zero_grad#Adam.zero_grad         0.01%      33.596us         0.01%      35.004us      35.004us             1  
+                              MseLossBackward         0.01%      19.422us         0.65%       2.261ms       2.261ms             1  
+                                RsubBackward1         0.00%      15.597us         0.66%       2.310ms       2.310ms             1  
+                              SigmoidBackward         0.00%      14.944us         0.18%     630.243us     630.243us             1  
+                                 ViewBackward         0.00%      14.943us         0.85%       2.971ms     594.123us             5  
+                                   aten::div_         0.00%      14.912us         0.01%      26.164us      26.164us             1  
+                                   aten::mean         0.00%      13.518us         0.11%     380.517us     380.517us             1  
+                                  aten::zeros         0.00%      12.566us         0.01%      17.419us       8.710us             2  
+                                   aten::conj         0.00%      11.577us         0.00%      11.577us       1.654us             7  
+                           UnsafeViewBackward         0.00%      10.570us         0.01%      37.943us      12.648us             3  
+                                 aten::expand         0.00%       9.186us         0.00%      12.220us       3.055us             4  
+                              PermuteBackward         0.00%       8.222us         0.01%      37.188us      12.396us             3  
+                                    TBackward         0.00%       7.436us         0.01%      33.479us       8.370us             4  
+                                aten::resize_         0.00%       6.416us         0.00%       6.416us       6.416us             1  
+                              aten::ones_like         0.00%       3.774us         0.00%       9.233us       9.233us             1  
+                                CloneBackward         0.00%       2.283us         0.00%       2.283us       0.761us             3  
+                      aten::broadcast_tensors         0.00%       1.600us         0.00%       1.600us       1.600us             1  
+---------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 348.291ms
+
