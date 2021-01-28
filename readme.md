@@ -7,12 +7,12 @@ The following trace files are not included due to large sizes:
 
 SETUP  
 pytorch/benchmark: master(commit: c0c4d9d).  
-torch+torchtext+torchvision: pytorchnightly.  
+torch+torchtext+torchvision: pytorch-nightly.  
 
 Cmd: `taskset -c 23 python test_profiled.py`  
 
 FILES:  
-Use the profiling files for trainning as a example:  
+Use the profiling files for trainning as an example:  
 Profile cmds:  
 ```
     with torch.autograd.profiler.profile(with_stack=True, record_shapes=True) as prof:
