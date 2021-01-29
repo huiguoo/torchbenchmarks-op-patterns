@@ -1,0 +1,31 @@
+kList(7),            Time(us),                Time%,   Calls (23, sorted by calls)
+-------------------------------------------------------------
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 3887416.0969999987, 136.01031442057558%, 34
+('aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_'), 2395700.100999999, 83.81915284187667%, 17
+('aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d'), 2410767.6019999986, 84.34632448942008%, 17
+('aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add'), 1242662.3929999992, 43.47744068894172%, 17
+('aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add'), 929495.4100000001, 32.52056374004923%, 10
+('aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d'), 940300.31, 32.898598354717045%, 10
+('aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add'), 145735.96999999994, 5.09891264724255%, 10
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 919943.7519999997, 32.1863767182842%, 10
+('aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_'), 912277.7519999992, 31.91816383745756%, 10
+('aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d'), 920645.893999999, 32.210942792973626%, 10
+('aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add'), 799971.8539999992, 27.98888019065347%, 10
+('aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d'), 528128.8490000002, 18.47781894572598%, 7
+('aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add'), 528203.993, 18.48044803374017%, 7
+('aten::hardtanh_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 697478.845, 24.402923341125923%, 7
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_'), 697870.4499999998, 24.4166245549527%, 7
+('aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d'), 473008.3849999996, 16.549301016957394%, 6
+('aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add'), 473014.8769999995, 16.54952815471141%, 6
+('aten::select', 'aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d'), 13174.567, 0.46094293878336534%, 1
+('aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::conv2d', 'aten::add'), 13159.303999999998, 0.46040892714756343%, 1
+('aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::adaptive_avg_pool2d'), 230664.84299999988, 8.07034725364587%, 1
+('aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::adaptive_avg_pool2d', 'aten::reshape'), 230653.05399999954, 8.069934787998577%, 1
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::adaptive_avg_pool2d', 'aten::reshape', 'aten::dropout'), 183605.85300000012, 6.423878785515049%, 1
+('aten::add', 'aten::batch_norm', 'aten::hardtanh_', 'aten::adaptive_avg_pool2d', 'aten::reshape', 'aten::dropout', 'aten::t'), 182279.43100000033, 6.377470819716489%, 1
+Aten total time : 2853062.380999999us
+Model total time: 2858177.421us
+Aten calls: 103979 , Top layer Aten calls: 208
+
+debug info:
+last top layer aten op: {'name': 'aten::addmm', 'ph': 'X', 'ts': 2858025.513, 'dur': 569.5320000001229, 'tid': 1, 'pid': 'CPU functions', 'args': {}}
