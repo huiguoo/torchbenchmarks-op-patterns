@@ -1,69 +1,31 @@
-kList(5),            Time(us),                Time%,   Calls (Top 66, sorted by calls)
+kList(5),            Time(us),                Time%,   Calls (23, sorted by calls)
 -------------------------------------------------------------
-('aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::select'), 2574986.223000009, 79.94377369393305%, 14320
-('aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided'), 2245130.596999989, 69.70297967294844%, 14320
-('aten::empty', 'aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided'), 6749.116000000338, 0.20953502481637462%, 40
-('aten::conv2d', 'aten::convolution', 'aten::_convolution', 'aten::mkldnn_convolution', 'aten::empty'), 176892.22000000003, 5.491847481584514%, 20
-('aten::convolution', 'aten::_convolution', 'aten::mkldnn_convolution', 'aten::empty', 'aten::as_strided_'), 132391.97499999998, 4.110279889560715%, 20
-('aten::_convolution', 'aten::mkldnn_convolution', 'aten::empty', 'aten::as_strided_', 'aten::add'), 89152.33800000008, 2.7678495013668307%, 20
-('aten::mkldnn_convolution', 'aten::empty', 'aten::as_strided_', 'aten::add', 'aten::batch_norm'), 730260.1000000001, 22.671868164052977%, 20
-('aten::empty', 'aten::as_strided_', 'aten::add', 'aten::batch_norm', 'aten::_batch_norm_impl_index'), 1371442.368, 42.578199961756944%, 20
-('aten::as_strided_', 'aten::add', 'aten::batch_norm', 'aten::_batch_norm_impl_index', 'aten::empty'), 1371010.2259999998, 42.56478355512025%, 20
-('aten::add', 'aten::batch_norm', 'aten::_batch_norm_impl_index', 'aten::empty', 'aten::native_batch_norm'), 2053475.4139999999, 63.75279693404049%, 20
-('aten::batch_norm', 'aten::_batch_norm_impl_index', 'aten::empty', 'aten::native_batch_norm', 'aten::empty'), 2052775.7, 63.73107340901078%, 20
-('aten::_batch_norm_impl_index', 'aten::empty', 'aten::native_batch_norm', 'aten::empty', 'aten::empty'), 1368585.9859999996, 42.48951989265529%, 20
-('aten::empty', 'aten::native_batch_norm', 'aten::empty', 'aten::empty', 'aten::select'), 685491.5949999999, 21.281972093787395%, 20
-('aten::native_batch_norm', 'aten::empty', 'aten::empty', 'aten::select', 'aten::as_strided'), 685480.2620000001, 21.281620246162284%, 20
-('aten::empty', 'aten::empty', 'aten::select', 'aten::as_strided', 'aten::select'), 3388.216000000107, 0.10519154266176853%, 20
-('aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::empty_like'), 3729.9290000003193, 0.11580046417609999%, 20
-('aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::empty_like', 'aten::empty'), 3357.569000000506, 0.10424006695658526%, 20
-('aten::select', 'aten::as_strided', 'aten::empty_like', 'aten::empty', 'aten::select'), 3922.8820000004134, 0.12179093932031318%, 20
-('aten::as_strided', 'aten::empty_like', 'aten::empty', 'aten::select', 'aten::as_strided'), 3514.3090000003695, 0.10910626273536404%, 20
-('aten::empty_like', 'aten::empty', 'aten::select', 'aten::as_strided', 'aten::select'), 3996.2710000004026, 0.12406939563018336%, 20
-('aten::relu_', 'aten::threshold_', 'aten::conv2d', 'aten::convolution', 'aten::_convolution'), 111466.25200000015, 3.460613786902926%, 15
-('aten::threshold_', 'aten::conv2d', 'aten::convolution', 'aten::_convolution', 'aten::mkldnn_convolution'), 145015.63100000008, 4.5021975974847255%, 15
-('aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::relu_'), 2321.551000000143, 0.07207554980496482%, 9
-('aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::relu_', 'aten::threshold_'), 2596.725000000124, 0.08061868210833821%, 9
-('aten::select', 'aten::as_strided', 'aten::relu_', 'aten::threshold_', 'aten::conv2d'), 22938.140000000145, 0.7121441880894128%, 8
-('aten::as_strided', 'aten::relu_', 'aten::threshold_', 'aten::conv2d', 'aten::convolution'), 43374.17400000017, 1.3466072631555497%, 8
-('aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::add_'), 1883.636000000035, 0.05847991292563414%, 8
-('aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::add_', 'aten::relu_'), 2342.9529999999068, 0.07274000254234114%, 8
-('aten::select', 'aten::as_strided', 'aten::add_', 'aten::relu_', 'aten::threshold_'), 2511.726000000046, 0.07797977835051534%, 8
-('aten::as_strided', 'aten::add_', 'aten::relu_', 'aten::threshold_', 'aten::conv2d'), 17801.672000000013, 0.5526759036728333%, 7
-('aten::add_', 'aten::relu_', 'aten::threshold_', 'aten::conv2d', 'aten::convolution'), 33266.79899999991, 1.032810749441257%, 7
-('aten::as_strided', 'aten::conv2d', 'aten::convolution', 'aten::_convolution', 'aten::mkldnn_convolution'), 21311.589999999946, 0.6616458421408324%, 4
-('aten::select', 'aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::conv2d'), 3473.5589999999793, 0.1078411263439687%, 3
-('aten::as_strided', 'aten::select', 'aten::as_strided', 'aten::conv2d', 'aten::convolution'), 6350.697999999931, 0.1971656233247761%, 3
-('aten::select', 'aten::as_strided', 'aten::conv2d', 'aten::convolution', 'aten::_convolution'), 9209.690999999933, 0.28592675429434483%, 3
-('aten::select', 'aten::as_strided', 'aten::unsqueeze', 'aten::as_strided', 'aten::conv2d'), 2579.2229999999995, 0.08007530990902172%, 1
-('aten::as_strided', 'aten::unsqueeze', 'aten::as_strided', 'aten::conv2d', 'aten::convolution'), 4850.505999999999, 0.1505902247171219%, 1
-('aten::unsqueeze', 'aten::as_strided', 'aten::conv2d', 'aten::convolution', 'aten::_convolution'), 7161.434000000001, 0.22233596976415196%, 1
-('aten::select', 'aten::as_strided', 'aten::relu_', 'aten::threshold_', 'aten::max_pool2d'), 6660.593000000001, 0.20678671392619438%, 1
-('aten::as_strided', 'aten::relu_', 'aten::threshold_', 'aten::max_pool2d', 'aten::max_pool2d_with_indices'), 12740.176, 0.395535221846068%, 1
-('aten::relu_', 'aten::threshold_', 'aten::max_pool2d', 'aten::max_pool2d_with_indices', 'aten::empty'), 12743.643, 0.39564285933978394%, 1
-('aten::threshold_', 'aten::max_pool2d', 'aten::max_pool2d_with_indices', 'aten::empty', 'aten::empty'), 12516.664, 0.38859600307034164%, 1
-('aten::max_pool2d', 'aten::max_pool2d_with_indices', 'aten::empty', 'aten::empty', 'aten::resize_'), 12350.695, 0.3834432810644156%, 1
-('aten::max_pool2d_with_indices', 'aten::empty', 'aten::empty', 'aten::resize_', 'aten::resize_'), 6221.612999999998, 0.19315801274608602%, 1
-('aten::empty', 'aten::empty', 'aten::resize_', 'aten::resize_', 'aten::conv2d'), 2790.2040000000015, 0.08662548760203838%, 1
-('aten::empty', 'aten::resize_', 'aten::resize_', 'aten::conv2d', 'aten::convolution'), 5410.330000000004, 0.1679706839850908%, 1
-('aten::resize_', 'aten::resize_', 'aten::conv2d', 'aten::convolution', 'aten::_convolution'), 8001.884000000002, 0.24842882571845964%, 1
-('aten::resize_', 'aten::conv2d', 'aten::convolution', 'aten::_convolution', 'aten::mkldnn_convolution'), 10551.994, 0.327600284933927%, 1
-('aten::as_strided', 'aten::add_', 'aten::relu_', 'aten::threshold_', 'aten::adaptive_avg_pool2d'), 469.4760000000242, 0.014575488895240865%, 1
-('aten::add_', 'aten::relu_', 'aten::threshold_', 'aten::adaptive_avg_pool2d', 'aten::mean'), 700.4059999998426, 0.02174500906363105%, 1
-('aten::relu_', 'aten::threshold_', 'aten::adaptive_avg_pool2d', 'aten::mean', 'aten::sum'), 721.168999999878, 0.022389623220547245%, 1
-('aten::threshold_', 'aten::adaptive_avg_pool2d', 'aten::mean', 'aten::sum', 'aten::empty'), 663.5030000000261, 0.020599307756858455%, 1
-('aten::adaptive_avg_pool2d', 'aten::mean', 'aten::sum', 'aten::empty', 'aten::fill_'), 659.8959999999497, 0.020487323782286286%, 1
-('aten::mean', 'aten::sum', 'aten::empty', 'aten::fill_', 'aten::div_'), 499.25499999988824, 0.015500016419138516%, 1
-('aten::sum', 'aten::empty', 'aten::fill_', 'aten::div_', 'aten::to'), 315.16500000003725, 0.009784704559272238%, 1
-('aten::empty', 'aten::fill_', 'aten::div_', 'aten::to', 'aten::empty_strided'), 252.20000000006985, 0.007829874795262324%, 1
-('aten::fill_', 'aten::div_', 'aten::to', 'aten::empty_strided', 'aten::copy_'), 254.59499999997206, 0.007904230664151628%, 1
-('aten::div_', 'aten::to', 'aten::empty_strided', 'aten::copy_', 'aten::flatten'), 287.9429999999702, 0.008939562403534343%, 1
-('aten::to', 'aten::empty_strided', 'aten::copy_', 'aten::flatten', 'aten::view'), 203.923000000068, 0.006331052965401939%, 1
-('aten::empty_strided', 'aten::copy_', 'aten::flatten', 'aten::view', 'aten::t'), 221.0360000000801, 0.0068623481571996455%, 1
-('aten::copy_', 'aten::flatten', 'aten::view', 'aten::t', 'aten::transpose'), 240.44000000006054, 0.007464770403540149%, 1
-('aten::flatten', 'aten::view', 'aten::t', 'aten::transpose', 'aten::as_strided'), 237.57400000002235, 0.0073757917312026605%, 1
-('aten::view', 'aten::t', 'aten::transpose', 'aten::as_strided', 'aten::addmm'), 511.12200000009034, 0.015868442764090673%, 1
-('aten::t', 'aten::transpose', 'aten::as_strided', 'aten::addmm', 'aten::empty'), 493.57400000002235, 0.015323642435352539%, 1
-('aten::transpose', 'aten::as_strided', 'aten::addmm', 'aten::empty', 'aten::expand'), 446.0659999999916, 0.013848695203895521%, 1
-('aten::as_strided', 'aten::addmm', 'aten::empty', 'aten::expand', 'aten::as_strided'), 424.55199999990873, 0.013180765281826226%, 1
-Total time: 3220996.58799998us
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d'), 313122.48100000015, 42.11889918222164%, 8
+('aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add'), 295059.4640000001, 39.68919694710886%, 8
+('aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 562222.256, 75.6259417811179%, 8
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add_', 'aten::relu_'), 292595.7139999998, 39.35779168508869%, 8
+('aten::add', 'aten::batch_norm', 'aten::add_', 'aten::relu_', 'aten::conv2d'), 224803.32599999994, 30.23886561381103%, 7
+('aten::batch_norm', 'aten::add_', 'aten::relu_', 'aten::conv2d', 'aten::add'), 224777.441, 30.235383756801443%, 7
+('aten::add_', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 279561.37700000004, 37.60450995246825%, 7
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 279619.9700000001, 37.612391445524594%, 7
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add_'), 154989.08199999988, 20.847974563356484%, 5
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d'), 138668.2510000001, 18.65261818631287%, 3
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add'), 138529.3710000001, 18.633937085231448%, 3
+('aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 262617.99400000006, 35.32541252674631%, 3
+('aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add_'), 262713.74999999994, 35.33829290919988%, 3
+('aten::select', 'aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 13642.154, 1.8350407390721377%, 1
+('aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 13796.325, 1.8557786713505369%, 1
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::max_pool2d'), 19910.939000000002, 2.678270910750623%, 1
+('aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::max_pool2d', 'aten::conv2d'), 20192.266000000007, 2.716112919131481%, 1
+('aten::batch_norm', 'aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::add'), 20176.867000000002, 2.7140415605805526%, 1
+('aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 19494.426000000003, 2.622244690598501%, 1
+('aten::max_pool2d', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 19399.455, 2.609469900486146%, 1
+('aten::add', 'aten::batch_norm', 'aten::add_', 'aten::relu_', 'aten::adaptive_avg_pool2d'), 69565.06299999985, 9.357373082074835%, 1
+('aten::batch_norm', 'aten::add_', 'aten::relu_', 'aten::adaptive_avg_pool2d', 'aten::flatten'), 69569.6129999999, 9.35798511411632%, 1
+('aten::add_', 'aten::relu_', 'aten::adaptive_avg_pool2d', 'aten::flatten', 'aten::t'), 563.1699999999255, 0.07575342523058448%, 1
+Aten total time : 740760.402us
+Model total time: 743425.13us
+Aten calls: 29171 , Top layer Aten calls: 92
+
+debug info:
+last top layer aten op: {'name': 'aten::addmm', 'ph': 'X', 'ts': 743289.749, 'dur': 330.08700000005774, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

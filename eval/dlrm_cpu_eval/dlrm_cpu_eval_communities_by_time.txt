@@ -1,2 +1,2 @@
-Community: {'aten::empty', 'aten::select', 'aten::copy_', 'aten::reshape', 'aten::cat', 'aten::embedding_bag', 'aten::to', 'aten::threshold', 'aten::index', 'aten::transpose', 'aten::as_strided', 'aten::slice', 'aten::view', 'aten::_cat', 'aten::relu', 'aten::_embedding_bag', 'aten::bmm', 'aten::expand', 'aten::resize_', 'aten::addmm', 'aten::t'}
-Community: {'aten::detach_'}
+Community: {'aten::cat', 'aten::addmm', 'aten::empty', 'aten::to', 'aten::slice', 'aten::index', 'aten::relu', 'aten::bmm', 'aten::detach_', 'aten::t', 'aten::view', 'aten::transpose'}
+Community: {'aten::embedding_bag', 'aten::select'}

@@ -1,0 +1,8 @@
+kList(10),            Time(us),                Time%,   Calls (0, sorted by calls)
+-------------------------------------------------------------
+Aten total time : 2580.327us
+Model total time: 2757.561us
+Aten calls: 87 , Top layer Aten calls: 6
+
+debug info:
+last top layer aten op: {'name': 'aten::nll_loss', 'ph': 'X', 'ts': 2611.086, 'dur': 149.28900000000021, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

@@ -1,0 +1,23 @@
+kList(6),            Time(us),                Time%,   Calls (15, sorted by calls)
+-------------------------------------------------------------
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu'), 23863.488999999994, 29.14088916613325%, 3
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t'), 6402.227999999999, 7.818077924997261%, 2
+('aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm'), 21675.785999999996, 26.469376603514384%, 2
+('aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::conv2d', 'aten::relu'), 46881.44500000001, 57.249256078739045%, 2
+('aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::conv2d', 'aten::relu', 'aten::conv2d'), 61651.575, 75.2857938750093%, 2
+('aten::conv2d', 'aten::pixel_shuffle', 'aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle'), 70797.434, 86.45425559693447%, 2
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::view'), 17370.616999999995, 21.21212136013933%, 1
+('aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::view', 'aten::conv2d'), 17127.056999999993, 20.914698172553333%, 1
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::view', 'aten::conv2d', 'aten::relu'), 17007.554999999993, 20.76876835746505%, 1
+('aten::addmm', 'aten::relu', 'aten::view', 'aten::conv2d', 'aten::relu', 'aten::conv2d'), 20694.88799999999, 25.271553439379336%, 1
+('aten::relu', 'aten::view', 'aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle'), 11234.079999999994, 13.718491883708797%, 1
+('aten::view', 'aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::conv2d'), 15489.718, 18.91526236807448%, 1
+('aten::pixel_shuffle', 'aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::conv2d'), 31214.050000000003, 38.11702351974356%, 1
+('aten::pixel_shuffle', 'aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::sigmoid'), 37301.21999999998, 45.55036850569305%, 1
+('aten::conv2d', 'aten::relu', 'aten::conv2d', 'aten::pixel_shuffle', 'aten::sigmoid', 'aten::view'), 31674.189999999988, 38.6789232797034%, 1
+Aten total time : 81736.65699999999us
+Model total time: 81890.051us
+Aten calls: 134 , Top layer Aten calls: 28
+
+debug info:
+last top layer aten op: {'name': 'aten::rsub', 'ph': 'X', 'ts': 81758.472, 'dur': 706.6860000000015, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

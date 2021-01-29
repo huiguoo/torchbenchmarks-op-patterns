@@ -1,0 +1,36 @@
+kList(8),            Time(us),                Time%,   Calls (28, sorted by time)
+-------------------------------------------------------------
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::select', 'aten::embedding_bag'), 1353.3620000000003, 31.531604366273612%, 1
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::select', 'aten::embedding_bag', 'aten::select'), 1234.9010000000003, 28.771614515196713%, 1
+('aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag'), 1192.4250000000002, 27.78197801952014%, 1
+('aten::addmm', 'aten::relu', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag'), 1176.9810000000002, 27.422152564222348%, 1
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::select'), 1117.1780000000003, 26.028819120608404%, 1
+('aten::relu', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::cat'), 1108.7950000000003, 25.833505938028665%, 1
+('aten::index', 'aten::cat', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu'), 1046.3490000000002, 24.378593973412897%, 1
+('aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::cat', 'aten::view'), 1039.57, 24.220651940166086%, 1
+('aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::cat', 'aten::view', 'aten::transpose'), 1038.92, 24.205507771172073%, 1
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm'), 1016.3739999999998, 23.68021479557352%, 1
+('aten::to', 'aten::index', 'aten::cat', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm'), 962.8390000000004, 22.432917738504944%, 1
+('aten::cat', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t'), 960.819, 22.38585432101584%, 1
+('aten::to', 'aten::to', 'aten::index', 'aten::cat', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t'), 820.7640000000001, 19.122751877236244%, 1
+('aten::select', 'aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::cat', 'aten::view', 'aten::transpose', 'aten::bmm'), 781.6549999999997, 18.21156217694866%, 1
+('aten::slice', 'aten::to', 'aten::to', 'aten::index', 'aten::cat', 'aten::t', 'aten::addmm', 'aten::relu'), 777.8500000000004, 18.122910541529862%, 1
+('aten::embedding_bag', 'aten::select', 'aten::embedding_bag', 'aten::cat', 'aten::view', 'aten::transpose', 'aten::bmm', 'aten::empty'), 736.9269999999999, 17.16945696038821%, 1
+('aten::detach_', 'aten::slice', 'aten::to', 'aten::to', 'aten::index', 'aten::cat', 'aten::t', 'aten::addmm'), 707.9490000000005, 16.49430660791352%, 1
+('aten::select', 'aten::embedding_bag', 'aten::cat', 'aten::view', 'aten::transpose', 'aten::bmm', 'aten::empty', 'aten::to'), 581.2799999999997, 13.543080850524483%, 1
+('aten::embedding_bag', 'aten::cat', 'aten::view', 'aten::transpose', 'aten::bmm', 'aten::empty', 'aten::to', 'aten::detach_'), 551.2929999999997, 12.844422088026755%, 1
+('aten::to', 'aten::detach_', 'aten::slice', 'aten::to', 'aten::to', 'aten::index', 'aten::cat', 'aten::t'), 532.5030000000006, 12.406639110492105%, 1
+('aten::empty', 'aten::to', 'aten::detach_', 'aten::slice', 'aten::to', 'aten::to', 'aten::index', 'aten::cat'), 447.10300000000007, 10.41692829189384%, 1
+('aten::cat', 'aten::view', 'aten::transpose', 'aten::bmm', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::empty'), 404.6729999999993, 9.428363537407595%, 1
+('aten::detach_', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::slice', 'aten::to', 'aten::to', 'aten::index'), 381.35300000000007, 8.88503735134542%, 1
+('aten::view', 'aten::transpose', 'aten::bmm', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::empty', 'aten::to'), 306.44599999999946, 7.139800017753613%, 1
+('aten::transpose', 'aten::bmm', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::empty', 'aten::to', 'aten::detach_'), 300.04699999999957, 6.990711498687922%, 1
+('aten::bmm', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::slice'), 297.4209999999998, 6.929529055952107%, 1
+('aten::empty', 'aten::to', 'aten::detach_', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::slice', 'aten::to'), 224.23599999999988, 5.224412120833691%, 1
+('aten::to', 'aten::detach_', 'aten::empty', 'aten::to', 'aten::detach_', 'aten::slice', 'aten::to', 'aten::to'), 217.24199999999973, 5.0614608624580875%, 1
+Aten total time : 3774.891us
+Model total time: 4292.081us
+Aten calls: 107 , Top layer Aten calls: 36
+
+debug info:
+last top layer aten op: {'name': 'aten::relu', 'ph': 'X', 'ts': 4195.7, 'dur': 99.19000000000051, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

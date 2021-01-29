@@ -1,0 +1,33 @@
+kList(10),            Time(us),                Time%,   Calls (25, sorted by time)
+-------------------------------------------------------------
+('aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d'), 29922.762000000024, 64.21844015101964%, 5
+('aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d'), 29810.566000000028, 63.97765181366015%, 5
+('aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat'), 25944.602000000014, 55.6807513550729%, 5
+('aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_'), 25707.42099999999, 55.171727694307215%, 3
+('aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_'), 25363.707000000017, 54.43406928770471%, 5
+('aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_'), 25189.266000000025, 54.05969445832287%, 5
+('aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d'), 13735.463999999993, 29.478230413037526%, 2
+('aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d'), 13224.239, 28.38106992811289%, 2
+('aten::conv2d', 'aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat'), 13178.189000000002, 28.282240175399746%, 1
+('aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d'), 12928.71599999999, 27.746836160229083%, 2
+('aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_'), 12925.591999999988, 27.7401316184815%, 2
+('aten::unsqueeze', 'aten::conv2d', 'aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_'), 12834.490000000002, 27.54461396089905%, 1
+('aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_'), 12756.984999999995, 27.378277370583447%, 2
+('aten::select', 'aten::unsqueeze', 'aten::conv2d', 'aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d'), 12740.890000000001, 27.34373524528665%, 1
+('aten::relu_', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d'), 12482.381000000003, 26.788938707954973%, 1
+('aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d'), 12345.573999999993, 26.495331716002124%, 2
+('aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_'), 12328.757999999987, 26.45924222367585%, 2
+('aten::relu_', 'aten::cat', 'aten::max_pool2d', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat'), 11830.194999999989, 25.389256165002095%, 2
+('aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::max_pool2d'), 11616.639, 24.93093506466749%, 2
+('aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d'), 9381.158000000018, 20.133279593984664%, 2
+('aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_'), 9347.476000000024, 20.06099330232595%, 2
+('aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::dropout', 'aten::conv2d'), 6490.198999999993, 13.92887648706048%, 1
+('aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::dropout', 'aten::conv2d', 'aten::relu_'), 6449.542999999998, 13.841623014176538%, 1
+('aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::dropout', 'aten::conv2d', 'aten::relu_', 'aten::adaptive_avg_pool2d'), 5795.869999999995, 12.438749160859201%, 1
+('aten::relu_', 'aten::cat', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::conv2d', 'aten::relu_', 'aten::cat', 'aten::dropout'), 4709.178, 10.106555857159782%, 1
+Aten total time : 45207.350000000006us
+Model total time: 46595.28us
+Aten calls: 818 , Top layer Aten calls: 68
+
+debug info:
+last top layer aten op: {'name': 'aten::flatten', 'ph': 'X', 'ts': 46537.166, 'dur': 58.66400000000431, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

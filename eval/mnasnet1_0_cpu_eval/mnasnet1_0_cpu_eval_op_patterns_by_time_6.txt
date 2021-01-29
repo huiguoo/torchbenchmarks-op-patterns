@@ -1,0 +1,28 @@
+kList(6),            Time(us),                Time%,   Calls (20, sorted by time)
+-------------------------------------------------------------
+('aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 4136515.1909999996, 135.5013621135549%, 34
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add'), 2622427.1779999994, 85.90381958121179%, 34
+('aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 2571021.707, 84.21991150425274%, 17
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d'), 1303060.6139999994, 42.68483976504877%, 17
+('aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 1049371.8260000013, 34.374662057560066%, 10
+('aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 1048614.8230000013, 34.349864629559015%, 10
+('aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add'), 1026163.4760000008, 33.61441752993198%, 10
+('aten::add', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d'), 899815.9870000009, 29.47560597754685%, 10
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm'), 693376.3669999994, 22.71318678830595%, 7
+('aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 687822.5889999995, 22.53125962277453%, 7
+('aten::batch_norm', 'aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d'), 547905.3109999993, 17.94793745984114%, 7
+('aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d'), 484592.6869999998, 15.873982356364454%, 6
+('aten::batch_norm', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::mean'), 208483.71600000001, 6.829378399953649%, 1
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d'), 179266.45400000122, 5.872297713572473%, 10
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::add', 'aten::conv2d', 'aten::add'), 178656.52300000118, 5.852317977616201%, 10
+('aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::mean', 'aten::dropout_'), 159328.10400000028, 5.219169788604355%, 1
+('aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::mean', 'aten::dropout_', 'aten::t'), 158078.7370000002, 5.178243810465058%, 1
+('aten::relu_', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::conv2d', 'aten::add'), 138317.94099999947, 4.530932087719789%, 7
+('aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_', 'aten::conv2d'), 8794.731, 0.288092264840496%, 1
+('aten::select', 'aten::unsqueeze', 'aten::conv2d', 'aten::add', 'aten::batch_norm', 'aten::relu_'), 7644.204, 0.2504040252354255%, 1
+Aten total time : 3047244.234us
+Model total time: 3052748.051us
+Aten calls: 115365 , Top layer Aten calls: 207
+
+debug info:
+last top layer aten op: {'name': 'aten::addmm', 'ph': 'X', 'ts': 3052598.83, 'dur': 536.75, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

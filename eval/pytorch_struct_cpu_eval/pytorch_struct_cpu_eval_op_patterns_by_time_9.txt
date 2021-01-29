@@ -1,0 +1,40 @@
+kList(9),            Time(us),                Time%,   Calls (32, sorted by time)
+-------------------------------------------------------------
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax'), 5255.004999999999, 45.17973521863187%, 2
+('aten::add', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum'), 4611.409, 39.646439461963595%, 2
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze'), 3289.2629999999995, 28.279332066181233%, 1
+('aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze'), 3099.815999999999, 26.650567622005795%, 1
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand'), 3047.340999999999, 26.19941550976276%, 1
+('aten::t', 'aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add'), 2995.855999999997, 25.756774890442447%, 2
+('aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::t'), 2984.4149999999972, 25.658411263645448%, 2
+('aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze'), 2982.927999999999, 25.645626829326158%, 1
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::t', 'aten::addmm'), 2939.8689999999965, 25.27542847199269%, 2
+('aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather'), 2936.1799999999994, 25.24371241402102%, 1
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::t', 'aten::addmm', 'aten::relu'), 2924.127999999997, 25.14009573452118%, 2
+('aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm'), 2883.9459999999976, 24.794632291469263%, 2
+('aten::addmm', 'aten::relu', 'aten::add', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu'), 2824.3100000000004, 24.28191371375179%, 2
+('aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand'), 2792.813999999999, 24.01112787426237%, 1
+('aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze'), 2732.6799999999985, 23.494127757680705%, 1
+('aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t'), 2692.7629999999963, 23.15094264354243%, 2
+('aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t', 'aten::addmm'), 2630.301000000002, 22.61392762239099%, 1
+('aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t', 'aten::addmm', 'aten::t', 'aten::addmm'), 2612.308000000001, 22.45923338788714%, 1
+('aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t', 'aten::addmm', 'aten::t'), 2463.6190000000015, 21.180884528100492%, 1
+('aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t'), 2450.903000000001, 21.071559130115116%, 1
+('aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax'), 2411.942000000002, 20.73659319500124%, 1
+('aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand'), 2404.5380000000014, 20.672937544900286%, 1
+('aten::relu', 'aten::add', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add'), 2401.733, 20.648821648285857%, 2
+('aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view', 'aten::log_softmax', 'aten::view'), 2399.3390000000018, 20.628239310854525%, 1
+('aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum'), 2280.51, 19.606610833565753%, 1
+('aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze', 'aten::einsum', 'aten::view'), 2225.1020000000008, 19.130242348855667%, 1
+('aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::add', 'aten::einsum', 'aten::log_softmax', 'aten::view'), 1813.6079999999984, 15.592436016786367%, 1
+('aten::expand', 'aten::t', 'aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm', 'aten::relu'), 1407.980999999997, 12.105071027118793%, 1
+('aten::log_softmax', 'aten::unsqueeze', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::expand', 'aten::unsqueeze', 'aten::gather', 'aten::squeeze'), 1394.384, 11.988171260178971%, 1
+('aten::view', 'aten::expand', 'aten::t', 'aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t', 'aten::addmm'), 1325.7139999999972, 11.39778316017458%, 1
+('aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t', 'aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu', 'aten::t'), 1268.2349999999979, 10.903609320067536%, 1
+('aten::view', 'aten::log_softmax', 'aten::view', 'aten::expand', 'aten::t', 'aten::addmm', 'aten::t', 'aten::addmm', 'aten::relu'), 1159.4799999999996, 9.968591731368338%, 1
+Aten total time : 11003.161999999995us
+Model total time: 11631.332us
+Aten calls: 224 , Top layer Aten calls: 51
+
+debug info:
+last top layer aten op: {'name': 'aten::expand', 'ph': 'X', 'ts': 11579.805, 'dur': 53.46899999999914, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

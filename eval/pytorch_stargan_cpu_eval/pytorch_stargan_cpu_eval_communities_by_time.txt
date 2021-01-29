@@ -1,2 +1,2 @@
-Community: {'aten::empty', 'aten::mkldnn_convolution', 'aten::slow_conv_transpose2d', 'aten::native_batch_norm', 'aten::_convolution', 'aten::cat', 'aten::threshold_', 'aten::fill_', 'aten::convolution', 'aten::relu_', 'aten::mean', 'aten::conv_transpose2d', 'aten::tanh', 'aten::view', 'aten::batch_norm', 'aten::sum', 'aten::zero_', 'aten::_cat', 'aten::empty_like', 'aten::_batch_norm_impl_index', 'aten::add', 'aten::conv2d', 'aten::resize_', 'aten::_convolution_nogroup'}
-Community: {'aten::empty_strided', 'aten::select', 'aten::repeat', 'aten::instance_norm', 'aten::div_', 'aten::copy_', 'aten::as_strided_', 'aten::expand', 'aten::expand_as', 'aten::unfold', 'aten::alias', 'aten::as_strided', 'aten::to'}
+Community: {'aten::cat', 'aten::conv_transpose2d', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::add', 'aten::view', 'aten::repeat'}
+Community: {'aten::tanh'}

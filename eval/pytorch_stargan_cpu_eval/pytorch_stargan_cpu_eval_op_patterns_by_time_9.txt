@@ -1,0 +1,30 @@
+kList(9),            Time(us),                Time%,   Calls (22, sorted by time)
+-------------------------------------------------------------
+('aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add'), 12251228.37099999, 97.04800377522507%, 5
+('aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm'), 12205735.21199999, 96.68763009409854%, 5
+('aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_'), 12196174.126999991, 96.61189203869085%, 5
+('aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d'), 12168979.834999992, 96.39647268050406%, 5
+('aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d'), 9846671.983999994, 78.00033032921372%, 4
+('aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm'), 9794628.418999992, 77.58806766136959%, 4
+('aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm'), 4444638.551, 35.208167362057836%, 2
+('aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_'), 3757883.233, 29.768040815100015%, 2
+('aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d'), 3615657.703, 28.641402460610934%, 2
+('aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d'), 2467328.2909999974, 19.544920562128304%, 1
+('aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d', 'aten::instance_norm'), 2437465.5130000003, 19.308362814258498%, 1
+('aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add'), 2368601.379, 18.76285614880205%, 1
+('aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv2d'), 2328232.373, 18.44307340310091%, 1
+('aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv_transpose2d'), 2208729.9159999993, 17.49643568263059%, 1
+('aten::add', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm'), 2130499.2349999975, 16.87673199291748%, 1
+('aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_'), 2122099.5009999983, 16.810193569809446%, 1
+('aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d'), 1845259.3180000018, 14.617206359766547%, 1
+('aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_'), 1773747.9859999996, 14.05072993734221%, 1
+('aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::add', 'aten::conv_transpose2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv_transpose2d', 'aten::instance_norm'), 1769232.0319999997, 14.014956845243287%, 1
+('aten::cat', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm'), 1680292.762, 13.310425156718312%, 1
+('aten::repeat', 'aten::cat', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d'), 1110544.8930000002, 8.797172145083753%, 1
+('aten::view', 'aten::repeat', 'aten::cat', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_', 'aten::conv2d', 'aten::instance_norm', 'aten::relu_'), 936055.276, 7.414954093427976%, 1
+Aten total time : 12620810.350999996us
+Model total time: 12623884.979us
+Aten calls: 380285 , Top layer Aten calls: 56
+
+debug info:
+last top layer aten op: {'name': 'aten::tanh', 'ph': 'X', 'ts': 12623801.605, 'dur': 1781.8829999994487, 'tid': 1, 'pid': 'CPU functions', 'args': {}}

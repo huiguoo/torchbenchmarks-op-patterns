@@ -1,1 +1,2 @@
-Community: {'aten::empty', 'aten::mkldnn_convolution', 'aten::copy_', 'aten::reshape', 'aten::_convolution', 'aten::convolution', 'aten::to', 'aten::threshold', 'aten::pixel_shuffle', 'aten::transpose', 'aten::sigmoid', 'aten::as_strided', 'aten::empty_strided', 'aten::clone', 'aten::view', 'aten::rsub', 'aten::empty_like', 'aten::relu', 'aten::permute', 'aten::_unsafe_view', 'aten::as_strided_', 'aten::expand', 'aten::conv2d', 'aten::addmm', 'aten::t'}
+Community: {'aten::sigmoid', 'aten::addmm', 'aten::conv2d', 'aten::relu', 'aten::pixel_shuffle', 'aten::t', 'aten::view'}
+Community: {'aten::rsub'}

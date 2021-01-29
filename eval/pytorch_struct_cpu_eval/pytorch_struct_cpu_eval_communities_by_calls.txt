@@ -1,1 +1,2 @@
-Community: {'aten::empty', 'aten::copy_', 'aten::reshape', 'aten::threshold', 'aten::transpose', 'aten::unsqueeze', 'aten::as_strided', 'aten::contiguous', 'aten::view', 'aten::squeeze', 'aten::einsum', 'aten::empty_like', 'aten::relu', 'aten::bmm', 'aten::permute', 'aten::expand', 'aten::add', 'aten::gather', 'aten::log_softmax', 'aten::resize_', 'aten::_log_softmax', 'aten::addmm', 'aten::t'}
+Community: {'aten::t', 'aten::add', 'aten::relu', 'aten::addmm'}
+Community: {'aten::log_softmax', 'aten::expand', 'aten::squeeze', 'aten::gather', 'aten::einsum', 'aten::unsqueeze', 'aten::view'}
