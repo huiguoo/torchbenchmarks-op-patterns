@@ -4,26 +4,32 @@ import networkx as nx
 from networkx.algorithms import community as com
 
 profiledir="/mnt/ssd1/huiguo/test/profile"
+err_threshold=1e-6
 
 class tracegraph:
     def __init__(self, tracefile):
         G=nx.DiGraph()
         with open(tracefile) as json_file:
             data = json.load(json_file)
-        pre, self.total_time = None, 0
+        pre, self.aten_time, self.clock = None, 0, 0
         for event in data:
+            self.clock=max(self.clock, event['ts'])
             if event['name'].find('aten::')==-1 or event['ph']!='X':
-                pre = None
                 continue
 
+            if event['ts']+event['dur']<self.clock-err_threshold:
+                continue
+
+            # update nodes
             name, dur = event['name'], event['dur']
             if not G.has_node(name):
                 G.add_node(name, dur=dur, calls=1)
             else:
                 G.nodes[name]['dur'] = G.nodes[name]['dur']+dur
                 G.nodes[name]['calls'] = G.nodes[name]['calls']+dur
-            self.total_time=self.total_time+dur
-    
+            self.aten_time, self.clock=self.aten_time+dur, event['ts']+dur
+
+            # update edges    
             if pre!=None:
                 if G.has_edge(pre['name'], name):
                     edata = G.get_edge_data(pre['name'], name)
@@ -31,12 +37,12 @@ class tracegraph:
                 else:
                     G.add_edge(pre['name'], name, calls=1, dur=dur+pre['dur'])
             pre = event
-        self.graph=G
+        self.graph, self.model_time = G, data[-1]['ts']+data[-1]['dur']
     
     def sorted_nodes(self, keyword):
         nodes=[]
         for n in self.graph.nodes():
-            nodes.append((n, self.graph.nodes[n]['dur'], self.graph.nodes[n]['dur']/self.total_time, self.graph.nodes[n]['calls']))
+            nodes.append((n, self.graph.nodes[n]['dur'], self.graph.nodes[n]['dur']/self.model_time, self.graph.nodes[n]['calls']))
         if keyword=='calls':
             id=-1
         elif keyword=='dur':
@@ -52,7 +58,7 @@ class tracegraph:
         edges=[]
         for m, n in self.graph.edges():
             time, calls = self.graph.get_edge_data(m, n)['dur'], self.graph.get_edge_data(m, n)['calls']
-            edges.append((m, n, time, time/self.total_time, calls))
+            edges.append((m, n, time, time/self.model_time, calls))
 
         if keyword=='calls':
             id=-1
@@ -79,41 +85,53 @@ class tracegraph:
 class kpath:
     def __init__(self, tracefile, k):
         self.k, self.kpaths = k, {}
-        self.total_time = 0
+        self.aten_time, self.aten_calls, self.top_aten_calls = 0, 0, 0
+        self.debug_last_top_aten = None
         
         with open(tracefile) as json_file:
             data = json.load(json_file)
         if self.k<=0 or self.k > len(data) or len(data)<=0:
             return
 
-        paths = collections.deque()    
+        paths, self.clock = collections.deque(), 0   
         for event in data:
+            self.clock = max(self.clock, event['ts'])
+            
+            # skip if not aten complete event
+            if event['name'].find('aten::')!=-1 and event['ph']=='X':
+                self.aten_calls = self.aten_calls+1
+            else:
+                continue
+            # skip if not at top layer
+            if event['ts']+event['dur']<self.clock-err_threshold:
+                continue
+            self.top_aten_calls = self.top_aten_calls+1
+
+            # count the first path if its size is k
             paths.append([0])
             if len(paths)==k+1:
                 kpath=tuple(paths[0][-k:])
                 time=paths[0][0]
-                #print(kpath, time)
                 if kpath in self.kpaths:
                     self.kpaths[kpath] = (self.kpaths[kpath][0] + time, self.kpaths[kpath][1]+1)
                 else:
                     self.kpaths[kpath] = (time, 1)
                 paths.popleft()
 
-            if event['name'].find('aten::')==-1 or event['ph']!='X':
-                paths.clear()
-                continue
-
-            self.total_time = self.total_time+event['dur']
+            self.aten_time, self.clock = self.aten_time+event['dur'], event['ts']+event['dur']
+            self.debug_last_top_aten = event
 
             for i in range(len(paths)):
                 paths[i].append(event['name'])
                 paths[i][0] = paths[i][0]+event['dur']
+
+        self.model_time = data[-1]['ts']+data[-1]['dur']
     
     def sorted_kpaths(self, keyword):
         kpathlist=[]
         for p, v in self.kpaths.items(): 
             t, c = v
-            kpathlist.append([p, t, t/self.total_time, c])
+            kpathlist.append([p, t, t/self.model_time, c])
 
         if keyword=='calls':
             id=-1
@@ -133,14 +151,20 @@ class kpath:
         kpathlist=self.sorted_kpaths(keyword)
 
         n = min(n, len(kpathlist))
+        topstr="Top "
+        if n==len(kpathlist):
+            topstr=""
         if keyword=='dur':
             keyword = 'time'
-        print(f"kList({self.k}),            Time(us),                Time%,   Calls (Top {n}, sorted by {keyword})")
+        print(f"kList({self.k}),            Time(us),                Time%,   Calls ({topstr}{n}, sorted by {keyword})")
         print("-------------------------------------------------------------")
         for i in range(n):
             print(f"{kpathlist[i][0]}, {kpathlist[i][1]}, {kpathlist[i][2]*100}%, {kpathlist[i][3]}");
 
-        print(f"Total time: {self.total_time}us")
+        print(f"Aten total time : {self.aten_time}us")
+        print(f"Model total time: {self.model_time}us")
+        print(f"Aten calls: {self.aten_calls} , Top layer Aten calls: {self.top_aten_calls}\n")
+        print(f"debug info:\nlast top layer aten op: {self.debug_last_top_aten}")
 
     def print_kpaths(self, keyword):
         self.print_topKpaths(keyword, len(self.kpaths.items())) 
@@ -157,7 +181,7 @@ def analyze():
 
             # path of length K
             ori_stdout = sys.stdout
-            for k in range(1, 6):
+            for k in range(1, 11):
                 kp = kpath(str(basepath/item.name), k)
                 with open(str(bmdir)+'/'+benchmark+'_op_patterns_by_time_'+str(k)+'.txt', 'w') as ftab:
                     sys.stdout = ftab
