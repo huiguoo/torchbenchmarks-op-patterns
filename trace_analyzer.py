@@ -3,7 +3,7 @@ from pathlib import Path
 import networkx as nx
 from networkx.algorithms import community as com
 
-profiledir="/mnt/ssd1/huiguo/test/profile"
+profiledir="/home/huiguo/profile/profile"
 err_threshold=1e-6
 
 class tracegraph:
@@ -12,11 +12,13 @@ class tracegraph:
         with open(tracefile) as json_file:
             data = json.load(json_file)
         pre, self.aten_time, self.clock = None, 0, 0
+        self.aten_calls, self.top_aten_calls = 0, 0
         for event in data:
             self.clock=max(self.clock, event['ts'])
             if event['name'].find('aten::')==-1 or event['ph']!='X':
                 continue
 
+            self.aten_calls = self.aten_calls+1
             if event['ts']+event['dur']<self.clock-err_threshold:
                 continue
 
@@ -26,10 +28,10 @@ class tracegraph:
                 G.add_node(name, dur=dur, calls=1)
             else:
                 G.nodes[name]['dur'] = G.nodes[name]['dur']+dur
-                G.nodes[name]['calls'] = G.nodes[name]['calls']+dur
+                G.nodes[name]['calls'] = G.nodes[name]['calls']+1
             self.aten_time, self.clock=self.aten_time+dur, event['ts']+dur
-
-            # update edges    
+            self.top_aten_calls = self.top_aten_calls+1
+            # update edges
             if pre!=None:
                 if G.has_edge(pre['name'], name):
                     edata = G.get_edge_data(pre['name'], name)
@@ -38,7 +40,7 @@ class tracegraph:
                     G.add_edge(pre['name'], name, calls=1, dur=dur+pre['dur'])
             pre = event
         self.graph, self.model_time = G, data[-1]['ts']+data[-1]['dur']
-    
+
     def sorted_nodes(self, keyword):
         nodes=[]
         for n in self.graph.nodes():
@@ -53,7 +55,7 @@ class tracegraph:
 
         nodes.sort(reverse=1, key=lambda x: x[id])
         return nodes
-    
+
     def sorted_edges(self, keyword):
         edges=[]
         for m, n in self.graph.edges():
@@ -70,12 +72,12 @@ class tracegraph:
 
         edges.sort(reverse=1, key=lambda x: x[id])
         return edges
-    
+
     def community_detection(self, keyword):
         if keyword!='calls' and keyword!='dur':
             print("Error: set keyword to be 'calls' or 'dur'")
             return []
-        
+
         #comms = com.greedy_modularity_communities(self.graph, weight=keyword)
         comms = com.asyn_lpa_communities(self.graph, weight=keyword)
         for c in list(comms):
@@ -87,16 +89,16 @@ class kpath:
         self.k, self.kpaths = k, {}
         self.aten_time, self.aten_calls, self.top_aten_calls = 0, 0, 0
         self.debug_last_top_aten = None
-        
+
         with open(tracefile) as json_file:
             data = json.load(json_file)
         if self.k<=0 or self.k > len(data) or len(data)<=0:
             return
 
-        paths, self.clock = collections.deque(), 0   
+        paths, self.clock = collections.deque(), 0
         for event in data:
             self.clock = max(self.clock, event['ts'])
-            
+
             # skip if not aten complete event
             if event['name'].find('aten::')!=-1 and event['ph']=='X':
                 self.aten_calls = self.aten_calls+1
@@ -126,10 +128,10 @@ class kpath:
                 paths[i][0] = paths[i][0]+event['dur']
 
         self.model_time = data[-1]['ts']+data[-1]['dur']
-    
+
     def sorted_kpaths(self, keyword):
         kpathlist=[]
-        for p, v in self.kpaths.items(): 
+        for p, v in self.kpaths.items():
             t, c = v
             kpathlist.append([p, t, t/self.model_time, c])
 
@@ -144,7 +146,7 @@ class kpath:
         kpathlist.sort(reverse=1, key=lambda x: x[id])
         return kpathlist
 
-    def print_topKpaths(self, keyword, n): 
+    def print_topKpaths(self, keyword, n):
         if keyword!='calls' and keyword!='dur':
             print("Error: set keyword to be 'calls' or 'dur'")
             return []
@@ -167,7 +169,7 @@ class kpath:
         print(f"debug info:\nlast top layer aten op: {self.debug_last_top_aten}")
 
     def print_kpaths(self, keyword):
-        self.print_topKpaths(keyword, len(self.kpaths.items())) 
+        self.print_topKpaths(keyword, len(self.kpaths.items()))
 
 def analyze():
     basepath = Path(profiledir)
@@ -200,11 +202,11 @@ def analyze():
                 G.community_detection('calls')
             sys.stdout = ori_stdout
 
-def test():   
+def test():
     ftrace="attention_is_all_you_need_pytorch_cpu_train.trace"
     G = tracegraph(ftrace)
     G.community_detection('dur')
-    
+
     kp = kpath(ftrace, 1)
     kp.print_topKpaths('dur', 50)
 
