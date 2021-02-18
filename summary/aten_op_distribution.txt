@@ -1,442 +1,339 @@
-pytorch_stargan
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::linear        
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     49.77                      5.00                      1600                 202386.87
-   aten::conv_transpose2d                     34.17                     84.00                       200                 138953.03
-      aten::instance_norm                     14.55                   1470.00                      1700                  59155.90
-              aten::relu_                      0.81                      1.00                      1100                   3285.99
-                aten::add                      0.49                      0.00                       600                   1994.46
-                aten::cat                      0.05                      9.00                       100                    215.27
-               aten::tanh                      0.03                      1.00                       100                    106.73
-             aten::repeat                      0.03                     16.00                       100                    101.84
-               aten::view                      0.00                      0.00                       100                      1.17
+             BERT_pytorch                     98.58                      9.97                      7400                    393.46
+     attention_is_all_you                     84.40                      9.25                      9700                    303.09
+          LearningToPaint                     57.49                      8.00                       400                      7.14
+                  alexnet                     49.70                      8.00                       300                      1.74
+           pytorch_struct                     47.32                      8.00                      1000                      0.28
+                    vgg16                     13.16                      8.00                       300                      3.57
+                   demucs                      7.64                     10.00                       100                      6.82
+                     dlrm                      7.50                      8.00                       500                      0.01
+     pytorch_mobilenet_v3                      5.91                      6.11                      1900                      0.23
+                  fastNLP                      5.27                      8.00                       100                      0.00
+             mobilenet_v2                      1.21                      8.00                       100                      0.06
+               mnasnet1_0                      1.08                      8.00                       100                      0.06
+                 resnet18                      0.83                      8.00                       100                      0.05
+       shufflenet_v2_x1_0                      0.76                      8.00                       100                      0.04
+                 resnet50                      0.68                      8.00                       100                      0.09
+          resnext50_32x4d                      0.67                      8.00                       100                      0.09
+              densenet121                      0.35                      8.00                       100                      0.06
 
-
-original aten: time=99.890%; callees per call=451.339
-
-resnext50_32x4d
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::conv2d        
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     56.35                    248.36                      5300                  17094.53
-             aten::conv2d                     32.67                     18.08                      5300                   9912.17
-              aten::relu_                      4.03                      1.00                      4900                   1222.28
-         aten::max_pool2d                      1.99                      5.00                       100                    604.83
-               aten::add_                      1.74                      0.00                      1600                    526.36
-              aten::addmm                      0.28                      4.00                       100                     85.75
-                aten::add                      0.14                      0.00                      5300                     41.58
-aten::adaptive_avg_pool2d                      0.09                      8.00                       100                     27.77
-                  aten::t                      0.00                      2.00                       100                      0.83
-            aten::flatten                      0.00                      1.00                       100                      0.80
-             aten::select                      0.00                      1.00                       100                      0.66
-          aten::unsqueeze                      0.00                      1.00                       100                      0.56
+                 resnet18                     77.83                      5.00                      2000                      4.88
+                 resnet50                     74.47                     18.08                      5300                      9.57
+                    vgg16                     74.46                      5.00                      1300                     20.18
+          resnext50_32x4d                     72.72                     18.08                      5300                      9.56
+       shufflenet_v2_x1_0                     71.55                     18.50                      5600                      4.12
+               mnasnet1_0                     69.92                     18.73                      5200                      3.56
+             mobilenet_v2                     66.65                     18.73                      5200                      3.26
+              densenet121                     60.74                     18.07                     12000                      9.81
+          pytorch_stargan                     58.10                      5.00                      1600                    217.58
+     pytorch_mobilenet_v3                     53.06                     19.14                      3600                      2.03
+                   yolov3                     53.00                     15.70                      7600                     57.67
+            squeezenet1_1                     46.73                     25.54                      2600                      1.54
+                  alexnet                     36.47                      5.00                       500                      1.28
+          LearningToPaint                     24.83                      5.00                       600                      3.08
 
-
-original aten: time=97.301%; callees per call=61.437
-
-squeezenet1_1
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::embedding_bag 
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     46.20                     25.54                      2600                   1609.91
-         aten::max_pool2d                     27.82                      5.00                       300                    969.56
-              aten::relu_                     10.61                      1.00                      2600                    369.62
-                aten::cat                      8.98                      6.00                       800                    312.74
-            aten::dropout                      2.22                     10.00                       100                     77.40
-aten::adaptive_avg_pool2d                      0.75                      8.00                       100                     26.20
-            aten::flatten                      0.03                      1.00                       100                      0.99
-             aten::select                      0.01                      1.00                       100                      0.49
-          aten::unsqueeze                      0.01                      1.00                       100                      0.47
+                  fastNLP                     74.46                     58.00                       100                      0.03
+                     dlrm                     49.65                      4.00                       300                      0.06
 
-
-original aten: time=96.637%; callees per call=11.382
-
-resnet18
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::lstm          
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     51.96                      5.00                      2000                   4907.31
-         aten::batch_norm                     33.56                     97.00                      2000                   3169.31
-         aten::max_pool2d                      6.47                      5.00                       100                    611.27
-              aten::relu_                      3.67                      1.00                      1700                    346.48
-               aten::add_                      1.48                      0.00                       800                    140.20
-              aten::addmm                      0.51                      4.00                       100                     47.83
-                aten::add                      0.17                      0.00                      2000                     16.29
-aten::adaptive_avg_pool2d                      0.06                      8.00                       100                      5.70
-            aten::flatten                      0.01                      1.00                       100                      0.85
-                  aten::t                      0.01                      2.00                       100                      0.80
-          aten::unsqueeze                      0.01                      1.00                       100                      0.63
-             aten::select                      0.01                      1.00                       100                      0.54
+                   demucs                     62.10                   3927.00                       100                     55.40
 
-
-original aten: time=97.910%; callees per call=22.598
-
-mobilenet_v2
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::conv_transpose2d
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     68.53                    130.12                     52000                 119913.69
-             aten::conv2d                     22.85                     18.73                     52000                  39979.83
-          aten::hardtanh_                      4.85                      2.00                     35000                   8494.02
-                aten::add                      0.47                      0.00                     62000                    826.22
-              aten::addmm                      0.36                      4.00                      1000                    629.83
-aten::adaptive_avg_pool2d                      0.16                      8.00                      1000                    275.36
-            aten::dropout                      0.15                     10.00                      1000                    269.26
-                  aten::t                      0.01                      2.00                      1000                     11.23
-            aten::reshape                      0.00                      1.00                      1000                      8.21
-             aten::select                      0.00                      1.00                      1000                      7.84
-          aten::unsqueeze                      0.00                      1.00                      1000                      6.08
+          pytorch_stargan                     36.40                     84.00                       200                    136.30
 
-
-original aten: time=97.391%; callees per call=37.678
-
-shufflenet_v2_x1_0
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::uniform_      
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     49.08                     64.64                      5600                   5840.51
-             aten::conv2d                     36.76                     18.50                      5600                   4373.61
-              aten::relu_                      2.62                      1.00                      3700                    311.41
-         aten::contiguous                      2.45                      3.00                      1600                    291.69
-         aten::max_pool2d                      2.09                      5.00                       100                    248.30
-                aten::cat                      1.80                      7.12                      1600                    213.75
-              aten::addmm                      0.44                      4.00                       100                     51.99
-                aten::add                      0.32                      0.00                      5600                     38.30
-               aten::mean                      0.21                      8.00                       100                     24.98
-              aten::chunk                      0.13                      7.00                      1300                     15.52
-               aten::view                      0.10                      0.00                      3200                     11.71
-          aten::transpose                      0.06                      1.00                      1600                      7.43
-                  aten::t                      0.01                      2.00                       100                      0.79
-             aten::select                      0.00                      1.00                       100                      0.59
-          aten::unsqueeze                      0.00                      1.00                       100                      0.54
+                   yolov3                     31.22                      0.00                      7900                     33.97
 
-
-original aten: time=96.065%; callees per call=16.391
-
-mnasnet1_0
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::einsum        
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     66.31                    144.65                      5200                   9746.15
-             aten::conv2d                     24.42                     18.73                      5200                   3589.71
-              aten::relu_                      5.16                      1.00                      3500                    758.38
-                aten::add                      0.60                      0.00                      6200                     88.66
-              aten::addmm                      0.38                      4.00                       100                     55.55
-               aten::mean                      0.17                      8.00                       100                     24.58
-           aten::dropout_                      0.16                      9.00                       100                     24.17
-                  aten::t                      0.01                      2.00                       100                      0.75
-             aten::select                      0.00                      1.00                       100                      0.63
-          aten::unsqueeze                      0.00                      1.00                       100                      0.55
+           pytorch_struct                     31.00                     25.00                       300                      0.18
 
-
-original aten: time=97.218%; callees per call=41.333
-
-pytorch_struct
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::max_pool2d    
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-              aten::addmm                     41.91                      4.00                      1000                    265.45
-             aten::einsum                     28.47                     25.00                       300                    180.29
-        aten::log_softmax                      9.48                      3.67                       300                     60.03
-               aten::relu                      2.08                      2.00                       800                     13.15
-             aten::gather                      1.57                      2.00                       100                      9.92
-                  aten::t                      0.97                      2.00                      1000                      6.16
-                aten::add                      0.37                      0.00                       400                      2.32
-          aten::unsqueeze                      0.24                      1.00                       400                      1.53
-             aten::expand                      0.24                      1.00                       400                      1.51
-               aten::view                      0.12                      0.00                       300                      0.76
-            aten::squeeze                      0.08                      1.00                       100                      0.51
+            squeezenet1_1                     29.26                      5.00                       300                      0.97
+                 resnet18                      9.81                      5.00                       100                      0.62
+                    vgg16                      9.65                      5.00                       500                      2.61
+                  alexnet                      8.92                      5.00                       300                      0.31
+                 resnet50                      4.78                      5.00                       100                      0.61
+          resnext50_32x4d                      4.69                      5.00                       100                      0.62
+       shufflenet_v2_x1_0                      4.25                      5.00                       100                      0.24
+              densenet121                      3.81                      5.00                       100                      0.61
+                   yolov3                      3.09                      5.00                       300                      3.36
 
-
-original aten: time=85.517%; callees per call=3.392
-
-dlrm
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::hardtanh_     
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-      aten::embedding_bag                     37.21                      4.00                       300                     59.94
-                aten::bmm                     11.99                      2.00                       100                     19.31
-              aten::addmm                      4.15                      4.00                       500                      6.68
-               aten::relu                      1.72                      2.00                       500                      2.77
-                  aten::t                      1.44                      2.00                       500                      2.33
-              aten::index                      1.16                      6.00                       100                      1.88
-                aten::cat                      1.03                      3.00                       200                      1.66
-             aten::select                      0.65                      1.00                       300                      1.04
-              aten::slice                      0.26                      1.00                       100                      0.41
-          aten::transpose                      0.25                      1.00                       100                      0.41
-               aten::view                      0.20                      0.00                       100                      0.32
-            aten::detach_                      0.18                      0.00                       200                      0.30
-              aten::empty                      0.15                      0.00                       200                      0.24
-                 aten::to                      0.14                      0.00                       400                      0.22
+             mobilenet_v2                     16.45                      2.00                      3500                      0.80
+     pytorch_mobilenet_v3                      4.10                      2.00                      2800                      0.16
 
-
-original aten: time=60.534%; callees per call=1.972
-
-attention_is_all_you
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::bmm           
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::matmul                     88.05                      8.25                     13300                 310694.93
-            aten::softmax                      2.50                      2.00                      1800                   8812.15
-                aten::mul                      1.81                      4.00                       100                   6371.53
-               aten::add_                      1.77                      0.00                      5400                   6229.87
-               aten::relu                      1.40                      2.00                      1200                   4952.55
-         aten::layer_norm                      1.30                      6.00                      3200                   4578.96
-        aten::masked_fill                      0.84                      9.00                      1800                   2963.02
-                aten::div                      0.66                      4.00                      1800                   2321.49
-         aten::contiguous                      0.64                      3.00                      1800                   2261.88
-          aten::embedding                      0.16                     28.00                       200                    553.96
-                 aten::eq                      0.12                      9.00                      1800                    406.16
-                aten::add                      0.06                      0.00                       200                    223.82
-                  aten::t                      0.03                      2.00                      9700                    100.04
-          aten::transpose                      0.01                      1.00                      9000                     50.73
-               aten::view                      0.01                      0.00                      7300                     43.09
-            aten::__and__                      0.01                      5.00                       100                     29.11
-               aten::triu                      0.01                      4.00                       100                     23.33
-          aten::unsqueeze                      0.00                      1.00                      2000                     11.22
-            aten::dropout                      0.00                      0.00                      5000                     10.43
-                 aten::ne                      0.00                      4.00                       200                      6.61
-              aten::clone                      0.00                      2.00                       200                      5.77
-               aten::rsub                      0.00                      4.00                       100                      2.99
-              aten::slice                      0.00                      1.00                       400                      2.65
-               aten::ones                      0.00                      2.00                       100                      1.15
-                 aten::to                      0.00                      2.00                       100                      0.78
-             aten::detach                      0.00                      0.00                       200                      0.71
+                     dlrm                     16.31                      2.00                       100                      0.02
 
-
-original aten: time=99.376%; callees per call=3.273
-
-vgg16
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::conv1d        
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     74.12                      5.00                      1300                  20512.84
-              aten::addmm                     13.34                      4.00                       300                   3692.58
-         aten::max_pool2d                      9.44                      5.00                       500                   2611.99
-              aten::relu_                      2.35                      1.00                      1500                    649.62
-            aten::dropout                      0.20                     10.00                       200                     55.63
-aten::adaptive_avg_pool2d                      0.13                      3.00                       100                     35.80
-                  aten::t                      0.01                      2.00                       300                      2.85
-            aten::flatten                      0.00                      1.00                       100                      1.23
-             aten::select                      0.00                      1.00                       100                      0.88
-          aten::unsqueeze                      0.00                      1.00                       100                      0.58
+                   demucs                     15.14                     19.89                      1800                     13.50
 
-
-original aten: time=99.597%; callees per call=3.311
-
-resnet50
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::relu_         
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     52.82                    194.92                      5300                  14227.07
-             aten::conv2d                     36.07                     18.08                      5300                   9714.46
-              aten::relu_                      3.92                      1.00                      4900                   1055.70
-         aten::max_pool2d                      2.29                      5.00                       100                    617.67
-               aten::add_                      1.92                      0.00                      1600                    517.76
-              aten::addmm                      0.33                      4.00                       100                     87.56
-                aten::add                      0.15                      0.00                      5300                     40.99
-aten::adaptive_avg_pool2d                      0.10                      8.00                       100                     27.74
-                  aten::t                      0.00                      2.00                       100                      0.83
-            aten::flatten                      0.00                      1.00                       100                      0.79
-             aten::select                      0.00                      1.00                       100                      0.65
-          aten::unsqueeze                      0.00                      1.00                       100                      0.55
+               mnasnet1_0                     15.13                      2.00                      3500                      0.77
+              densenet121                     11.35                      2.00                     12100                      1.83
+            squeezenet1_1                     10.94                      2.00                      2600                      0.36
+          resnext50_32x4d                      9.75                      2.00                      4900                      1.28
+                 resnet50                      8.70                      2.00                      4900                      1.12
+       shufflenet_v2_x1_0                      5.30                      2.00                      3700                      0.31
+                 resnet18                      4.84                      2.00                      1700                      0.30
+     pytorch_mobilenet_v3                      3.69                      2.00                      1500                      0.14
+                  alexnet                      3.09                      2.00                       700                      0.11
+                    vgg16                      2.23                      2.00                      1500                      0.60
+          pytorch_stargan                      0.71                      2.00                      1100                      2.67
 
-
-original aten: time=97.612%; callees per call=49.177
-
-fastNLP
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::pixel_shuffle 
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-      aten::embedding_bag                     47.14                     58.00                       100                     31.33
-            aten::dropout                     34.84                     10.00                       100                     23.15
-              aten::addmm                      2.37                      4.00                       100                      1.57
-        aten::log_softmax                      1.68                      2.00                       100                      1.11
-           aten::nll_loss                      1.29                      5.00                       100                      0.86
-                  aten::t                      0.84                      2.00                       100                      0.56
+          LearningToPaint                     12.19                     11.00                       300                      1.51
 
-
-original aten: time=88.149%; callees per call=13.500
-
-pytorch_mobilenet_v3
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::cat           
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     50.53                     19.14                     36000                  21389.68
-                aten::mul                      7.84                      1.00                     28000                   3316.95
-                aten::div                      6.06                      4.00                     28000                   2565.13
-                aten::add                      5.48                      2.47                     34000                   2320.38
-             aten::matmul                      4.43                      2.00                     18000                   1876.97
-          aten::hardtanh_                      4.09                      2.00                     28000                   1731.58
-         aten::batch_norm                      3.95                      9.00                     35000                   1673.22
-              aten::relu_                      3.55                      1.00                     15000                   1500.84
-aten::adaptive_avg_pool2d                      2.41                      8.00                     10000                   1020.82
-              aten::addmm                      1.33                      4.00                      1000                    561.97
-                  aten::t                      0.34                      2.00                     19000                    145.86
-               aten::view                      0.22                      0.00                     18000                     94.25
-          aten::expand_as                      0.17                      2.00                      9000                     70.30
-               aten::mean                      0.12                      8.00                      2000                     48.79
-            aten::dropout                      0.00                      0.00                      1000                      1.37
+              densenet121                     11.77                     31.16                      6200                      1.90
+            squeezenet1_1                      8.84                      6.00                       800                      0.29
+       shufflenet_v2_x1_0                      3.49                      7.12                      1600                      0.20
+                     dlrm                      1.19                      3.00                       200                      0.00
+                   yolov3                      0.34                      9.00                       400                      0.37
 
-
-original aten: time=90.522%; callees per call=5.287
-
-densenet121
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::conv_transpose1d
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-         aten::batch_norm                     57.35                    136.62                     12100                  22266.60
-             aten::conv2d                     25.63                     18.07                     12000                   9952.02
-                aten::cat                      6.96                     31.16                      6200                   2703.13
-              aten::relu_                      4.79                      1.00                     12100                   1860.56
-         aten::max_pool2d                      1.56                      5.00                       100                    604.31
-         aten::avg_pool2d                      0.58                      2.00                       300                    226.38
-                aten::add                      0.19                      0.00                     12100                     73.35
-              aten::addmm                      0.14                      4.00                       100                     54.25
-aten::adaptive_avg_pool2d                      0.06                      8.00                       100                     25.18
-                  aten::t                      0.00                      2.00                       100                      0.82
-            aten::flatten                      0.00                      1.00                       100                      0.70
-          aten::unsqueeze                      0.00                      1.00                       100                      0.59
-             aten::select                      0.00                      1.00                       100                      0.56
+                   demucs                     10.74                     38.00                       600                      9.58
 
-
-original aten: time=97.282%; callees per call=37.443
-
-BERT_pytorch
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::log_softmax   
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::matmul                     97.56                      7.97                      9700                 387695.27
-            aten::dropout                      0.63                     10.00                      6100                   2487.03
-                aten::mul                      0.49                      2.50                      7200                   1950.84
-                aten::add                      0.34                      1.09                      9900                   1364.11
-               aten::tanh                      0.19                      1.00                      1200                    741.74
-                aten::pow                      0.14                      6.00                      1200                    567.78
-                aten::std                      0.14                      2.00                      2400                    566.55
-            aten::softmax                      0.09                      2.00                      1200                    364.49
-               aten::add_                      0.09                      0.00                      7300                    342.60
-                aten::sub                      0.02                      1.00                      2400                     93.02
-                aten::div                      0.02                      2.00                      3600                     71.77
-               aten::mean                      0.02                      7.00                      2400                     66.67
-         aten::contiguous                      0.02                      3.00                      1300                     64.26
-        aten::masked_fill                      0.02                      9.00                      1200                     63.10
-                  aten::t                      0.01                      2.00                      7400                     53.67
-                 aten::eq                      0.01                      8.00                      1200                     33.60
-          aten::transpose                      0.01                      1.00                      6100                     30.48
-               aten::view                      0.01                      0.00                      5000                     25.86
-          aten::embedding                      0.00                     17.00                       200                     15.90
-        aten::log_softmax                      0.00                      2.00                       200                      3.39
-             aten::repeat                      0.00                     14.00                       100                      3.33
-              aten::addmm                      0.00                      4.00                       100                      2.05
-              aten::slice                      0.00                      1.00                       300                      1.51
-                 aten::gt                      0.00                      3.00                       100                      1.42
-           aten::nll_loss                      0.00                      5.00                       100                      1.41
-         aten::nll_loss2d                      0.00                      5.00                       100                      1.41
-          aten::unsqueeze                      0.00                      1.00                       200                      0.85
-             aten::select                      0.00                      1.00                       100                      0.56
+           pytorch_struct                      9.42                      3.67                       300                      0.06
+                  fastNLP                      2.65                      2.00                       100                      0.00
 
-
-original aten: time=99.800%; callees per call=3.344
-
-LearningToPaint
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::batch_norm    
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-              aten::addmm                     56.88                      4.00                       400                   6962.26
-             aten::conv2d                     25.23                      5.00                       600                   3087.41
-      aten::pixel_shuffle                     12.45                     11.00                       300                   1524.26
-               aten::relu                      2.68                      2.00                       700                    328.37
-            aten::sigmoid                      0.93                      1.00                       100                    114.32
-               aten::rsub                      0.66                      4.00                       100                     80.72
-                  aten::t                      0.03                      2.00                       400                      3.58
-               aten::view                      0.01                      0.00                       200                      1.31
+             mobilenet_v2                      8.28                      9.00                      5200                      0.41
+               mnasnet1_0                      6.52                      9.00                      5200                      0.33
+              densenet121                      4.99                      9.00                     12100                      0.81
+          resnext50_32x4d                      4.89                      9.00                      5300                      0.64
+                 resnet50                      4.13                      9.00                      5300                      0.53
+     pytorch_mobilenet_v3                      2.85                      9.00                      3500                      0.11
+                   yolov3                      2.80                      9.00                      7300                      3.05
+       shufflenet_v2_x1_0                      2.78                      9.00                      5600                      0.16
+                 resnet18                      1.89                      9.00                      2000                      0.12
 
-
-original aten: time=98.881%; callees per call=3.786
-
-demucs
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::mul           
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-               aten::lstm                     60.67                   3927.00                       100                  55663.08
-             aten::conv1d                     14.87                     19.89                      1800                  13645.89
-   aten::conv_transpose1d                     10.42                     38.00                       600                   9563.12
-             aten::matmul                      7.17                      5.00                       100                   6577.24
-                aten::glu                      1.65                      9.00                      1200                   1515.03
-             aten::gather                      1.36                      2.00                       400                   1243.79
-               aten::relu                      0.95                      2.00                      1100                    875.55
-                aten::add                      0.93                      0.00                       700                    849.71
-            aten::l1_loss                      0.41                     21.00                       100                    375.69
-                aten::cat                      0.33                      6.00                       100                    303.20
-                aten::mul                      0.33                      2.50                       200                    301.49
-               aten::rsub                      0.23                      1.00                       100                    214.32
-                aten::sum                      0.22                      3.00                       100                    198.44
-             aten::arange                      0.03                      3.00                       100                     30.90
-               aten::add_                      0.02                      0.00                       100                     21.75
-              aten::slice                      0.01                      1.00                       800                      6.10
-            aten::argsort                      0.01                     12.00                       100                      4.79
-            aten::randint                      0.00                      2.00                       300                      3.90
-               aten::view                      0.00                      0.00                       300                      2.16
-              aten::zeros                      0.00                      2.00                       100                      2.11
-             aten::expand                      0.00                      1.00                       300                      2.09
-            aten::permute                      0.00                      1.00                       200                      1.82
-               aten::rand                      0.00                      2.00                       100                      1.54
-                aten::sub                      0.00                      4.00                       100                      1.15
-                  aten::t                      0.00                      2.00                       100                      0.74
-                 aten::to                      0.00                      0.00                       100                      0.20
-  aten::broadcast_tensors                      0.00                      0.00                       100                      0.15
+     pytorch_mobilenet_v3                      7.85                      1.00                      2800                      0.30
+     attention_is_all_you                      1.88                      4.00                       100                      6.76
+             BERT_pytorch                      0.32                      2.50                      7200                      1.27
 
-
-original aten: time=99.624%; callees per call=50.383
-
-yolov3
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::add           
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-             aten::conv2d                     53.38                     15.70                      7600                  55782.37
-           aten::uniform_                     30.85                      0.00                      7900                  32237.08
-         aten::max_pool2d                      3.27                      5.00                       300                   3412.38
-        aten::leaky_relu_                      2.42                      1.00                      7300                   2529.92
-         aten::batch_norm                      2.18                      9.00                      7300                   2280.54
-                aten::add                      1.38                      0.00                      2600                   1438.80
-                aten::cat                      0.38                      9.00                       400                    395.79
-               aten::rand                      0.30                      2.00                       100                    315.12
- aten::upsample_nearest2d                      0.27                      0.00                       200                    281.63
-         aten::contiguous                      0.22                      3.00                       300                    233.30
-                aten::exp                      0.17                      1.00                       300                    178.26
-           aten::sigmoid_                      0.16                      1.00                       300                    166.37
-              aten::clone                      0.14                      2.00                       300                    142.00
-             aten::select                      0.08                      1.00                     16600                     81.23
-              aten::empty                      0.08                      0.00                     30400                     80.83
-              aten::copy_                      0.06                      0.00                      1500                     66.44
-               aten::ones                      0.05                      2.00                      7300                     53.95
-            aten::sigmoid                      0.05                      1.00                       300                     53.58
-             aten::detach                      0.05                      0.00                     22800                     51.10
-               aten::mul_                      0.04                      3.00                       300                     45.57
-              aten::zero_                      0.04                      0.00                     21900                     39.04
-              aten::zeros                      0.03                      2.00                      7300                     36.19
-           aten::set_data                      0.03                      1.00                     22500                     35.29
-                 aten::to                      0.03                      0.02                     52900                     35.26
-              aten::fill_                      0.03                      0.00                     14600                     35.16
-                aten::mul                      0.02                      1.00                       300                     20.70
-  aten::is_floating_point                      0.02                      0.00                     44400                     17.30
-              aten::slice                      0.02                      1.00                      4700                     17.22
-            aten::detach_                      0.01                      0.00                      7600                     14.43
-                 aten::gt                      0.01                      8.00                       200                     13.35
-              aten::stack                      0.01                     14.00                       300                     11.01
-aten::_has_compatible_shallow_copy_type        0.01                      0.00                     22500                      9.80
-             aten::arange                      0.01                      3.00                       600                      7.00
-           aten::meshgrid                      0.01                      6.00                       300                      6.80
-               aten::add_                      0.01                      3.00                       600                      6.65
-              aten::index                      0.00                      7.00                       200                      5.21
-               aten::view                      0.00                      0.00                      1500                      5.06
-                aten::div                      0.00                      4.00                       300                      4.92
-                 aten::lt                      0.00                      8.00                       100                      1.66
-                aten::all                      0.00                      5.00                       100                      1.59
-            aten::permute                      0.00                      1.00                       300                      1.36
-            aten::__and__                      0.00                      4.00                       100                      1.24
-             aten::unbind                      0.00                      2.00                       100                      0.72
-               aten::set_                      0.00                      0.00                       300                      0.42
+     pytorch_mobilenet_v3                      5.13                      2.47                      3400                      0.20
+                   yolov3                      1.30                      0.00                      2600                      1.41
+               mnasnet1_0                      1.09                      0.00                      1000                      0.06
+             mobilenet_v2                      0.72                      0.00                      1000                      0.04
+                   demucs                      0.58                      0.00                       600                      0.52
+          pytorch_stargan                      0.53                      0.00                       600                      1.99
+           pytorch_struct                      0.41                      0.00                       400                      0.00
+             BERT_pytorch                      0.22                      1.09                      9900                      0.87
 
-
-original aten: time=95.843%; callees per call=0.917
-
-alexnet
-                  Aten op                    time %          callees per call                     calls                  time(ms)
+aten::contiguous    
+                Benchmark                    time %          callees per call                     calls                   time(s)
 -------------------------------------------------------------------------------------------------------------------------------
-              aten::addmm                     48.55                      4.00                       300                   1736.72
-             aten::conv2d                     36.27                      5.00                       500                   1297.68
-         aten::max_pool2d                      8.75                      5.00                       300                    312.91
-              aten::relu_                      3.09                      1.00                       700                    110.43
-            aten::dropout                      1.47                     10.00                       200                     52.52
-aten::adaptive_avg_pool2d                      0.71                      3.00                       100                     25.26
-                  aten::t                      0.06                      2.00                       300                      2.25
-            aten::flatten                      0.02                      1.00                       100                      0.74
-             aten::select                      0.02                      1.00                       100                      0.70
-          aten::unsqueeze                      0.01                      1.00                       100                      0.49
+       shufflenet_v2_x1_0                      4.79                      3.00                      1600                      0.28
+     attention_is_all_you                      0.64                      3.00                      1800                      2.28
+                   yolov3                      0.21                      3.00                       300                      0.23
 
+aten::div           
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     pytorch_mobilenet_v3                      4.75                      4.00                      2800                      0.18
+     attention_is_all_you                      0.66                      4.00                      1800                      2.38
 
-original aten: time=98.942%; callees per call=3.370
+aten::matmul        
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     attention_is_all_you                      4.47                     17.00                      3600                     16.04
+             BERT_pytorch                      0.22                     17.00                      2400                      0.86
 
+aten::add_          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                 resnet50                      4.06                      0.00                      1600                      0.52
+          resnext50_32x4d                      4.03                      0.00                      1600                      0.53
+                 resnet18                      2.35                      0.00                       800                      0.15
+     attention_is_all_you                      0.86                      0.00                      3000                      3.09
+
+aten::relu          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+           pytorch_struct                      3.87                      4.00                       800                      0.02
+          LearningToPaint                      2.90                      4.00                       700                      0.36
+                     dlrm                      2.75                      4.00                       500                      0.00
+     attention_is_all_you                      1.46                      4.00                      1200                      5.23
+                   demucs                      1.04                      4.00                      1100                      0.93
+
+aten::adaptive_avg_pool2d
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     pytorch_mobilenet_v3                      3.74                      8.00                      1000                      0.14
+            squeezenet1_1                      0.79                      8.00                       100                      0.03
+                  alexnet                      0.71                      3.00                       100                      0.02
+             mobilenet_v2                      0.54                      8.00                       100                      0.03
+                 resnet50                      0.22                      8.00                       100                      0.03
+          resnext50_32x4d                      0.22                      8.00                       100                      0.03
+
+aten::instance_norm 
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+          pytorch_stargan                      3.59                     80.00                      1700                     13.46
+
+aten::softmax       
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     attention_is_all_you                      2.49                      2.00                      1800                      8.92
+
+aten::leaky_relu_   
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   yolov3                      2.30                      1.00                      7300                      2.51
+
+aten::nll_loss      
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                  fastNLP                      1.96                      5.00                       100                      0.00
+
+aten::gather        
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+           pytorch_struct                      1.74                      2.00                       100                      0.01
+
+aten::glu           
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   demucs                      1.73                      9.00                      1200                      1.54
+
+aten::avg_pool2d    
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+              densenet121                      1.42                      2.00                       300                      0.23
+
+aten::index         
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      1.31                      6.00                       100                      0.00
+
+aten::layer_norm    
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     attention_is_all_you                      1.25                      6.00                      3200                      4.50
+
+aten::chunk         
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+       shufflenet_v2_x1_0                      1.07                      7.00                      1300                      0.06
+
+aten::sigmoid       
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+          LearningToPaint                      0.95                      1.00                       100                      0.12
+
+aten::masked_fill   
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+     attention_is_all_you                      0.80                      9.00                      1800                      2.86
+
+aten::select        
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      0.78                      1.00                       300                      0.00
+
+aten::rsub          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+          LearningToPaint                      0.62                      4.00                       100                      0.08
+
+aten::mean          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+               mnasnet1_0                      0.51                      8.00                       100                      0.03
+       shufflenet_v2_x1_0                      0.41                      8.00                       100                      0.02
+
+aten::l1_loss       
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   demucs                      0.46                     21.00                       100                      0.41
+
+aten::unsqueeze     
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+           pytorch_struct                      0.31                      1.00                       400                      0.00
+
+aten::upsample_nearest2d
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   yolov3                      0.30                      0.00                       200                      0.33
+
+aten::transpose     
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      0.28                      1.00                       100                      0.00
+
+aten::slice         
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      0.28                      1.00                       100                      0.00
+
+aten::rand          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   yolov3                      0.27                      2.00                       100                      0.30
+
+aten::expand        
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+           pytorch_struct                      0.26                      1.00                       400                      0.00
+
+aten::sum           
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                   demucs                      0.25                      3.00                       100                      0.22
+
+aten::detach_       
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      0.24                      0.00                       200                      0.00
+
+aten::view          
+                Benchmark                    time %          callees per call                     calls                   time(s)
+-------------------------------------------------------------------------------------------------------------------------------
+                     dlrm                      0.24                      0.00                       100                      0.00
+       shufflenet_v2_x1_0                      0.19                      0.00                      3200                      0.01
+     pytorch_mobilenet_v3                      0.19                      0.00                      1800                      0.01
