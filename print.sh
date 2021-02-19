@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/home/huiguo/profile/profile"
+path="/mnt/ssd1/huiguo/profile/profile"
 K=10
 length=1
 mode="eager"
@@ -69,6 +69,8 @@ print_summary()
       cat $comfile
     fi
   
+    aten_calls=0
+    tabfile=$path/$bpre.tab
     opfile=$path/$bpre/${bpre}_op_patterns_by_${keyword}_1.txt
     if [ -f $opfile ];then
       echo ""
@@ -77,14 +79,27 @@ print_summary()
       k1=$((n-5))
       k2=$((n-4))
       timestr=`sed -n "${k1},${k2}p" $opfile`
+      aten_time=`sed -n "${k1}p" $opfile |  sed -e "s/ Aten total time: //g" -e "s/s//"`
+      model_time=`sed -n "${k2}p" $opfile | sed -e "s/Model total time: //g" -e "s/s//"`
       echo "$timestr"
       # print aten op calls
       k1=$((n-3))
       callstr=`sed -n "${k1}p" $opfile`
       echo "$callstr"
+      aten_calls=`echo $callstr | cut -d ',' -f 1 | sed -e "s/Aten calls: //g" -e "s/ //g"`
     fi
-  
+
     echo ""
+    tabfile=$path/$bpre.tab
+    realtimestr=`tail -n 1 $tabfile`
+    echo $realtimestr
+    realtime=`echo $realtimestr | sed -e "s/Time without profiling: //g" -e "s/s\.//g"`
+    atenps=`echo "scale=2; $aten_calls/$realtime" | bc -l` 
+    echo "Aten calls per second: $atenps"
+    atentime1=`echo "scale=2; $aten_time/$model_time" | bc -l`
+    atentime2=`echo "scale=2; $aten_time/$realtime" | bc -l`
+    echo "Aten time per second: $atentime1 ~ $atentime2"
+    
   done
 }
 
@@ -101,8 +116,6 @@ print_top_patterns()
       topstr=`sed -n "1,${k}p" $opfile`
       echo "$topstr"
     fi
-  
-    echo ""
   done
 }
 
